@@ -1,25 +1,6 @@
-const PRODUCTS = [
-  {id:1,name:"Aurora Headphones",cat:"audio",price:129,rating:4.8,emoji:"🎧"},
-  {id:2,name:"Pulse Speaker",cat:"audio",price:89,rating:4.5,emoji:"🔊"},
-  {id:3,name:"Nimbus Earbuds",cat:"audio",price:59,rating:4.3,emoji:"🎵"},
-  {id:4,name:"Orbit Smartwatch",cat:"wearables",price:199,rating:4.7,emoji:"⌚"},
-  {id:5,name:"Halo Fitness Band",cat:"wearables",price:49,rating:4.2,emoji:"📿"},
-  {id:6,name:"Terra Backpack",cat:"bags",price:79,rating:4.6,emoji:"🎒"},
-  {id:7,name:"Metro Tote",cat:"bags",price:45,rating:4.1,emoji:"👜"},
-  {id:8,name:"Voyager Duffel",cat:"bags",price:95,rating:4.4,emoji:"🧳"},
-  {id:9,name:"Lumen Desk Lamp",cat:"home",price:39,rating:4.5,emoji:"💡"},
-  {id:10,name:"Drift Ceramic Mug",cat:"home",price:19,rating:4.9,emoji:"☕"},
-  {id:11,name:"Echo Wall Clock",cat:"home",price:29,rating:4.0,emoji:"🕰️"},
-  {id:12,name:"Zen Mechanical Keyboard",cat:"tech",price:149,rating:4.8,emoji:"⌨️"},
-  {id:13,name:"Glide Wireless Mouse",cat:"tech",price:35,rating:4.4,emoji:"🖱️"},
-  {id:14,name:"Prism Webcam HD",cat:"tech",price:69,rating:4.3,emoji:"📷"},
-  {id:15,name:"Flux USB-C Hub",cat:"tech",price:55,rating:4.6,emoji:"🔌"},
-  {id:16,name:"Solstice Sunglasses",cat:"style",price:75,rating:4.2,emoji:"🕶️"},
-  {id:17,name:"Canvas Cap",cat:"style",price:25,rating:4.0,emoji:"🧢"},
-  {id:18,name:"Runner Sneakers",cat:"style",price:110,rating:4.7,emoji:"👟"},
-];
+const PRODUCTS = [{"id": 1, "name": "Apple MacBook Pro 14 Inch Space Grey", "cat": "laptops", "price": 1999.99, "rating": 3.65, "emoji": "\ud83d\udecd", "image": "../assets/products/0.webp"}, {"id": 2, "name": "Asus Zenbook Pro Dual Screen Laptop", "cat": "laptops", "price": 1799.99, "rating": 3.95, "emoji": "\ud83d\udecd", "image": "../assets/products/1.webp"}, {"id": 3, "name": "Huawei Matebook X Pro", "cat": "laptops", "price": 1399.99, "rating": 4.98, "emoji": "\ud83d\udecd", "image": "../assets/products/2.webp"}, {"id": 4, "name": "Lenovo Yoga 920", "cat": "laptops", "price": 1099.99, "rating": 2.86, "emoji": "\ud83d\udecd", "image": "../assets/products/3.webp"}, {"id": 5, "name": "iPhone 5s", "cat": "smartphones", "price": 199.99, "rating": 2.83, "emoji": "\ud83d\udecd", "image": "../assets/products/4.webp"}, {"id": 6, "name": "iPhone 6", "cat": "smartphones", "price": 299.99, "rating": 3.41, "emoji": "\ud83d\udecd", "image": "../assets/products/5.webp"}, {"id": 7, "name": "iPhone 13 Pro", "cat": "smartphones", "price": 1099.99, "rating": 4.12, "emoji": "\ud83d\udecd", "image": "../assets/products/6.webp"}, {"id": 8, "name": "iPhone X", "cat": "smartphones", "price": 899.99, "rating": 2.51, "emoji": "\ud83d\udecd", "image": "../assets/products/7.webp"}, {"id": 9, "name": "Nike Air Jordan 1 Red And Black", "cat": "mens-shoes", "price": 149.99, "rating": 4.77, "emoji": "\ud83d\udecd", "image": "../assets/products/8.webp"}, {"id": 10, "name": "Nike Baseball Cleats", "cat": "mens-shoes", "price": 79.99, "rating": 3.88, "emoji": "\ud83d\udecd", "image": "../assets/products/9.webp"}, {"id": 11, "name": "Puma Future Rider Trainers", "cat": "mens-shoes", "price": 89.99, "rating": 4.9, "emoji": "\ud83d\udecd", "image": "../assets/products/10.webp"}, {"id": 12, "name": "Sports Sneakers Off White & Red", "cat": "mens-shoes", "price": 119.99, "rating": 4.77, "emoji": "\ud83d\udecd", "image": "../assets/products/11.webp"}];
 
-const state = {cat:"all", q:"", max:300, sort:"featured"};
+const state = {cat:"all", q:"", max:5000, sort:"featured"};
 const cart = new Map(JSON.parse(localStorage.getItem("shoplane-cart")||"[]"));
 
 const $ = s => document.querySelector(s);
@@ -59,7 +40,7 @@ function renderGrid(){
     const el = document.createElement("article");
     el.className = "card";
     el.innerHTML = `
-      <div class="emoji">${p.emoji}</div>
+      <div class="emoji"><img src="${p.image}" alt="${p.name}" style="width:100%;height:180px;object-fit:contain"></div>
       <div class="body">
         <span class="cat">${p.cat}</span>
         <h4>${p.name}</h4>
@@ -88,7 +69,7 @@ function renderCart(){
     items.innerHTML = `<p class="cartempty">Your cart is empty.<br>Add something nice.</p>`;
   }
   cart.forEach((qty,id)=>{
-    const p = PRODUCTS.find(x=>x.id===id);
+    const p = PRODUCTS.find(x=>x.id===id); if(!p) return;
     count += qty; total += qty*p.price;
     const row = document.createElement("div");
     row.className = "ci";
@@ -122,7 +103,7 @@ $("#checkout").onclick = ()=>{
   cart.clear(); saveCart(); renderCart();
   const msg = $("#checkoutMsg");
   msg.hidden = false;
-  msg.textContent = "Order placed! Thanks for shopping with Shop Lane.";
+  msg.textContent = "Demo checkout complete. No order was sent and no payment was taken.";
 };
 
 $("#search").oninput = e => { state.q = e.target.value.trim().toLowerCase(); renderGrid(); };
