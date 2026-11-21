@@ -22,9 +22,12 @@ try:
   page.wait_for_function('document.querySelector("#preview").srcdoc.length>0',timeout=60000)
   page.frame_locator('#preview').locator('button').click()
   assert 'It works' in page.frame_locator('#preview').locator('h1').inner_text()
+  page.add_init_script("""window.__audioRMS=[];const connect=AudioNode.prototype.connect;AudioNode.prototype.connect=function(destination,...args){if(destination instanceof AudioDestinationNode){let analyser=this.context.createAnalyser();analyser.fftSize=2048;connect.call(this,analyser);let samples=new Float32Array(2048);setInterval(()=>{analyser.getFloatTimeDomainData(samples);window.__audioRMS.push(Math.sqrt(samples.reduce((s,x)=>s+x*x,0)/samples.length))},100)}return connect.call(this,destination,...args)}""")
   page.goto('http://localhost:8765/noise-maker/')
   page.locator('#play').click()
   page.wait_for_function("['وقّف الصوت','Stop sound'].includes(document.querySelector('#play').textContent)")
+  page.wait_for_function('Math.max(...window.__audioRMS)>0.001')
+  page.locator('#play').click()
   assert not errors,errors
   browser.close()
 finally:

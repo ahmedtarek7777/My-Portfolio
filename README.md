@@ -72,3 +72,9 @@ The gallery cards use themed web-sourced photographs with custom typography and 
 Noise Maker generates white, pink and brown noise locally. Audio starts after a user gesture and awaits AudioContext.resume() before scheduling sound. Audio output was tested with an analyser at the destination for Noise Maker, Sound Lab and Drum Machine. Device mute switches, browser background suspension and hardware volume remain under the visitor's control.
 
 External runtime dependencies: Monaco Editor 0.52.2 from jsDelivr (MIT), Transformers.js 3.7.3 from jsDelivr (Apache-2.0), model files from Hugging Face (Apache-2.0). Translation text is sent to api.mymemory.translated.net only after clicking Translate; public service quotas and availability apply. Weather remains Open-Meteo. No API keys are embedded.
+
+
+## Final catalog expansion
+Exactly 50,000 distinct records including 556 preserved Fresh models. {'groceries': 23873, 'technology': 4229, 'household': 21898}. Original source names and per-record source/license fields retained. All prices generated demo EGP. Household includes personal care. Some images remain unchecked and use a clear unavailable-photo fallback. See shop-lane/catalog/SOURCES.md for licensing, attribution and market-vs-manufacture caveats.
+
+Final post-quality counts: 23,639 supermarket + 4,238 technology + 22,123 home/personal care = 50,000. Removed 166 obvious test/invalid food records and reclassified 68 non-food records. Product names are community/source-authored and not all individually audited.

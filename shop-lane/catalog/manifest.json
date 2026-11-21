@@ -1,0 +1,23 @@
+{
+  "total": 50000,
+  "collections": {
+    "grocery": {
+      "titleAr": "السوبر ماركت",
+      "titleEn": "Supermarket",
+      "count": 23639,
+      "file": "catalog/grocery.json"
+    },
+    "tech": {
+      "titleAr": "تقنية وإلكترونيات",
+      "titleEn": "Technology",
+      "count": 4238,
+      "file": "catalog/tech.json"
+    },
+    "home": {
+      "titleAr": "منزل وعناية شخصية",
+      "titleEn": "Home and personal care",
+      "count": 22123,
+      "file": "catalog/home.json"
+    }
+  }
+}
