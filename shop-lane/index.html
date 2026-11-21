@@ -1,89 +1,200 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Shop Lane — Storefront</title>
-    <link rel="stylesheet" href="style.css?v=3" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Shop Lane / 20,000 real products</title>
+    <meta
+      name="description"
+      content="Explore 20,000 real packaged-food catalog records, plus a separate tech collection, in an interactive demo storefront."
+    />
+    <link rel="stylesheet" href="../studio.css?v=4" />
+    <link rel="stylesheet" href="style.css?v=4" />
   </head>
   <body>
-    <a
-      href="../#work"
-      style="
-        display: block;
-        text-align: center;
-        background: #14151a;
-        color: #eee;
-        padding: 10px;
-        font: 12px sans-serif;
-      "
-      >← Back to Ahmed's project gallery</a
-    >
-    <header class="topbar">
-      <a class="brand" href="#">Shop<span>Lane</span></a>
-      <div class="searchwrap">
-        <input
-          id="search"
-          type="search"
-          placeholder="Search products..."
-          aria-label="Search products"
-        />
+    <header class="shopHeader">
+      <a class="brand" href="./">shop<span>lane</span>✳</a>
+      <div class="headerLinks">
+        <a href="../#work">← Portfolio</a
+        ><button id="theme" aria-label="Toggle color theme">◐</button
+        ><button id="wishlistButton">♡ <span id="wishCount">0</span></button
+        ><button class="primary" id="cartButton">
+          Bag <span id="cartCount">0</span>
+        </button>
       </div>
-      <button id="cartBtn" class="cartbtn" aria-label="Open cart">
-        🛒 <span id="cartCount" class="count">0</span>
-      </button>
     </header>
-    <p style="text-align: center; padding: 8px">
-      Demo store · Real product photography · Illustrative prices · No orders or
-      payments
-    </p>
-
-    <div class="layout">
-      <aside class="filters">
-        <h3>Category</h3>
-        <div id="categories" class="cats"></div>
-        <h3>Max price</h3>
-        <input
-          id="price"
-          type="range"
-          min="10"
-          max="5000"
-          value="5000"
-          step="5"
-        />
-        <div class="priceval">Up to $<span id="priceVal">5000</span></div>
-        <h3>Sort</h3>
-        <select id="sort">
-          <option value="featured">Featured</option>
-          <option value="low">Price: low to high</option>
-          <option value="high">Price: high to low</option>
-          <option value="rating">Top rated</option>
-        </select>
-      </aside>
-
-      <main>
-        <p id="resultInfo" class="resultinfo"></p>
-        <div id="grid" class="grid"></div>
-        <p id="empty" class="empty" hidden>No products match your filters.</p>
-      </main>
-    </div>
-
-    <div id="overlay" class="overlay" hidden></div>
-    <aside id="drawer" class="drawer" aria-label="Shopping cart">
-      <div class="drawerhead">
-        <h2>Your cart</h2>
-        <button id="closeCart" class="x" aria-label="Close cart">✕</button>
-      </div>
-      <div id="cartItems" class="cartitems"></div>
-      <div class="drawerfoot">
-        <div class="total">
-          <span>Total</span><strong id="cartTotal">$0.00</strong>
+    <main>
+      <section class="shopHero">
+        <div>
+          <span class="badge">THE CATALOG / REIMAGINED</span>
+          <h1>More to explore.<br />Less ordinary.</h1>
+          <p>
+            20,000 real packaged-food records. A world of everyday discoveries,
+            one shelf at a time.
+          </p>
+          <a class="button primary" href="#catalog">Explore the collection ↓</a>
         </div>
-        <button id="checkout" class="checkout">Checkout</button>
-        <p id="checkoutMsg" class="checkoutmsg" hidden></p>
+        <div class="heroProduct">
+          <span class="orbitMark">✳</span>
+          <div>
+            <strong>20,000</strong><span>distinct real product records</span
+            ><small>Open Food Facts + contributors</small>
+          </div>
+        </div>
+      </section>
+      <div class="demoNotice">
+        <strong>Interactive demo, not a real retailer.</strong> Prices are
+        generated demo prices in USD, not current offers. No real orders,
+        payments or stock availability. Source records can contain errors.
+        Images load from Open Food Facts.
       </div>
-    </aside>
-
-    <script src="app.js?v=3"></script>
+      <section id="catalog">
+        <div class="collectionTabs">
+          <button id="groceryCollection" class="active">
+            Global grocery catalog <span>20,000</span></button
+          ><button id="techCollection">
+            Original tech & style <span>12</span>
+          </button>
+        </div>
+        <div class="catalogLayout">
+          <aside class="filterPanel">
+            <div class="row">
+              <h2>Refine your search</h2>
+              <button id="resetFilters">Reset</button>
+            </div>
+            <label
+              >Search products<input
+                id="search"
+                placeholder="Name, brand or barcode..."
+                type="search" /></label
+            ><label
+              >Category<select id="category">
+                <option value="all">All categories</option>
+              </select></label
+            ><label
+              >Max demo price <span id="priceLabel">$100.00</span
+              ><input
+                id="price"
+                type="range"
+                min="0"
+                max="100"
+                value="100"
+                step="1" /></label
+            ><label
+              >Sort by<select id="sort">
+                <option value="featured">Catalog order</option>
+                <option value="name">Name A to Z</option>
+                <option value="low">Price: low to high</option>
+                <option value="high">Price: high to low</option>
+              </select></label
+            ><label style="display: block"
+              ><input id="favoritesOnly" type="checkbox" /> Saved products
+              only</label
+            ><label
+              >Products per page<select id="pageSize">
+                <option value="24">24</option>
+                <option value="48">48</option>
+                <option value="96">96</option>
+              </select></label
+            >
+            <div class="sourceBox">
+              <h3>A real open catalog.</h3>
+              <p>
+                Contains data from
+                <a
+                  href="https://openfoodfacts.org"
+                  target="_blank"
+                  rel="noopener"
+                  >Open Food Facts</a
+                >, available under the Open Database License. Individual
+                contents: DbCL. Photographs: CC-BY-SA, Open Food Facts
+                contributors.
+              </p>
+              <a href="catalog/LICENSE.md">Data & photo credits ↗</a
+              ><a href="catalog/groceries.json" download
+                >Download this ODbL dataset ↗</a
+              >
+            </div>
+          </aside>
+          <div>
+            <div class="resultsBar">
+              <div>
+                <h2 id="collectionTitle">The global grocery shelf</h2>
+                <p id="results" role="status">
+                  Loading the 20,000-product catalog...
+                </p>
+              </div>
+              <span class="pill" id="totalBadge"
+                >Real records · Demo prices</span
+              >
+            </div>
+            <div id="loading" class="loading">
+              <span>✳</span>
+              <h3>Stocking the digital shelves.</h3>
+              <p>
+                Loading the catalog once. Only the current page's images are
+                requested.
+              </p>
+            </div>
+            <div id="grid" class="productGrid"></div>
+            <div id="empty" class="empty" hidden>
+              No products match. Try another search or reset the filters.
+            </div>
+            <div class="pagination" id="pagination" hidden>
+              <button id="prev">← Previous</button
+              ><label
+                >Page
+                <input
+                  id="pageNumber"
+                  type="number"
+                  min="1"
+                  value="1"
+                  aria-label="Page number" />
+                <span id="pageTotal"></span></label
+              ><button id="next">Next →</button>
+            </div>
+            <p class="catalogFoot">
+              The grocery snapshot has 20,000 unique barcodes and unique
+              name/brand/quantity combinations. Variants may share a product
+              family. The tech collection uses a separate DummyJSON demo
+              catalog. Prices are invented solely to demonstrate store
+              interactions.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <dialog id="detail">
+      <button
+        id="closeDetail"
+        class="dialogClose"
+        aria-label="Close product details"
+      >
+        ×
+      </button>
+      <div id="detailBody"></div>
+    </dialog>
+    <dialog id="cartDialog">
+      <div class="row">
+        <h2>Your bag</h2>
+        <button id="closeCart" aria-label="Close shopping bag">×</button>
+      </div>
+      <p>Demo bag. No products are reserved.</p>
+      <div id="cartItems"></div>
+      <div class="cartTotal row">
+        <span>Demo total</span><strong id="cartTotal"></strong>
+      </div>
+      <button id="checkout" class="primary" style="width: 100%">
+        Complete demo checkout
+      </button>
+      <p id="checkoutMessage" role="status"></p>
+    </dialog>
+    <footer>
+      <a class="brand" href="../">shoplane✳</a>
+      <p>Built to explore. Not built to take your money.</p>
+      <a href="../#work">All 25 experiences ↗</a>
+    </footer>
+    <script src="../studio.js?v=4"></script>
+    <script src="app.js?v=4"></script>
   </body>
 </html>

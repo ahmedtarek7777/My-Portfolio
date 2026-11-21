@@ -53,3 +53,13 @@ Open `http://localhost:8080`. All projects are browser-only. Do not enter real c
 ## Verification
 
 Key interactions have been checked in desktop Chrome and responsive 390px mobile layouts. Automated smoke tests are in `tests/smoke.py`, using Python Playwright. Install `playwright`, install its Chromium browser, then run `python tests/smoke.py`. These tests cover core user flows, not every edge case or all browser engines.
+
+## Shop Lane large-catalog release
+
+Shop Lane now contains a 20,000-record real grocery catalog imported from the official Open Food Facts bulk export. This is not a repeated list of invented SKUs. Barcode and name/brand/quantity combinations are unique within the selection. All grocery records include source image URLs, with lazy loading and a photo-unavailable fallback. Demo prices are generated and explicitly labeled. The original 12 tech/style products remain a separate collection. See `shop-lane/catalog/LICENSE.md` for ODbL, DbCL and CC-BY-SA attribution and reuse terms.
+
+The store renders only 24, 48 or 96 items at a time, with page navigation/jump, brand/name/barcode search, categories, price/sort filters, persistent saved items, details and a quantity-based cart. No orders, stock checks or payments occur.
+
+## Project cover art
+
+The gallery cards use themed web-sourced photographs with custom typography and color treatment, not screenshots from inside the apps. Photo source pages and license credits are in `COVER-CREDITS.md` and `assets/covers/credits.json`. Files are stored locally for reliable loading.

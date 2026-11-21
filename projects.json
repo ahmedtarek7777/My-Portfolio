@@ -4,7 +4,7 @@
     "NOVA Exchange",
     "Finance",
     "Paper trading, portfolio analytics and a simulated market.",
-    "\u2197",
+    "↗",
     "#a98af2"
   ],
   [
@@ -12,15 +12,15 @@
     "PLAY / LAB",
     "Games",
     "Five games, personal bests and instant play.",
-    "\u2726",
+    "✦",
     "#e6bd74"
   ],
   [
     "shop-lane",
     "Shop Lane",
     "Commerce",
-    "Real product photography, filters and a persistent cart.",
-    "\u25c8",
+    "20,000 real grocery records, product search, saved items and a demo cart.",
+    "◈",
     "#82c8bd"
   ],
   [
@@ -28,7 +28,7 @@
     "Taskly",
     "Productivity",
     "Plan your day with drag-and-drop tasks and dark mode.",
-    "\u2713",
+    "✓",
     "#e49db1"
   ],
   [
@@ -36,7 +36,7 @@
     "Weather Now",
     "Tools",
     "City search, live conditions and a five-day forecast.",
-    "\u2600",
+    "☀",
     "#85b5ec"
   ],
   [
@@ -44,7 +44,7 @@
     "Ember & Oak",
     "Experiences",
     "An atmospheric cafe concept and local demo booking.",
-    "\u2668",
+    "♨",
     "#c49a73"
   ],
   [
@@ -52,7 +52,7 @@
     "Flow Board",
     "Productivity",
     "A project board with priorities, search, movable cards and JSON backup.",
-    "\u25c8",
+    "◈",
     "#aac8dd"
   ],
   [
@@ -60,7 +60,7 @@
     "Budget Lab",
     "Finance",
     "Income, expenses, category budgets, charts and transaction exports.",
-    "\u25d2",
+    "◒",
     "#95c9ac"
   ],
   [
@@ -68,7 +68,7 @@
     "Invoice Studio",
     "Business",
     "Editable line items, tax, discounts, saved drafts and print-ready invoices.",
-    "\u25a4",
+    "▤",
     "#c8bb91"
   ],
   [
@@ -76,7 +76,7 @@
     "Ink Notes",
     "Productivity",
     "A searchable notebook with tags, safe Markdown preview and export.",
-    "\u270e",
+    "✎",
     "#c6a1c8"
   ],
   [
@@ -84,7 +84,7 @@
     "Habit Garden",
     "Lifestyle",
     "Habit tracking with weekly history, streaks and completion analytics.",
-    "\u2740",
+    "❀",
     "#b8ce8c"
   ],
   [
@@ -92,7 +92,7 @@
     "Focus Room",
     "Productivity",
     "A configurable focus timer with breaks, task queue and session log.",
-    "\u25f7",
+    "◷",
     "#9eaad2"
   ],
   [
@@ -100,7 +100,7 @@
     "Daylight Calendar",
     "Productivity",
     "Monthly planning with event editing, reminders on the page and ICS export.",
-    "\u25a6",
+    "▦",
     "#e0b38c"
   ],
   [
@@ -108,7 +108,7 @@
     "Fair Share",
     "Finance",
     "Group expenses, equal splits, net balances and simplified settlements.",
-    "\u21c4",
+    "⇄",
     "#98c2c9"
   ],
   [
@@ -116,7 +116,7 @@
     "Client Desk",
     "Business",
     "A local CRM with contacts, deal stages, notes, search and pipeline value.",
-    "\u25ce",
+    "◎",
     "#c8aad8"
   ],
   [
@@ -124,7 +124,7 @@
     "Stock Room",
     "Business",
     "Inventory with real product imagery, stock movements, low-stock flags and search.",
-    "\u25a7",
+    "▧",
     "#a6c2a2"
   ],
   [
@@ -132,7 +132,7 @@
     "Route Book",
     "Lifestyle",
     "A multi-day itinerary builder with budgets, packing and trip exports.",
-    "\u2301",
+    "⌁",
     "#9ac7c2"
   ],
   [
@@ -140,7 +140,7 @@
     "Meal Studio",
     "Lifestyle",
     "Recipe search, serving scaling, a weekly meal plan and shopping list.",
-    "\u25d2",
+    "◒",
     "#dcc78a"
   ],
   [
@@ -148,7 +148,7 @@
     "Rep Studio",
     "Lifestyle",
     "Workout sessions, exercise sets, training volume and personal records.",
-    "\u219f",
+    "↟",
     "#d6a094"
   ],
   [
@@ -156,7 +156,7 @@
     "Quiz Academy",
     "Learning",
     "Topic quizzes with explanations, review mode and progress history.",
-    "\u25c7",
+    "◇",
     "#a8bddd"
   ],
   [
@@ -164,7 +164,7 @@
     "Sound Lab",
     "Creative",
     "A browser synthesizer and step sequencer with tempo, waveforms and pattern storage.",
-    "\u266b",
+    "♫",
     "#b4a2d3"
   ],
   [
@@ -172,7 +172,7 @@
     "Pixel Studio",
     "Creative",
     "Private image editing with filters, rotation, resizing and PNG export.",
-    "\u25a3",
+    "▣",
     "#b1c7d9"
   ],
   [
@@ -180,7 +180,7 @@
     "Pathfinder",
     "Learning",
     "Interactive BFS and Dijkstra pathfinding with walls, weights and animation.",
-    "\u2318",
+    "⌘",
     "#a6c4ad"
   ],
   [
@@ -188,7 +188,7 @@
     "Type Racer",
     "Learning",
     "Timed typing practice with live accuracy, WPM, progress and personal history.",
-    "\u2328",
+    "⌨",
     "#b8abd5"
   ],
   [
@@ -196,7 +196,7 @@
     "Data Lens",
     "Business",
     "CSV import, numeric summaries, sortable tables, category charts and export.",
-    "\u25a5",
+    "▥",
     "#94b9c3"
   ]
 ]

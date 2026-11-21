@@ -1,0 +1,19 @@
+import subprocess,json,time,statistics
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+from PIL import Image
+R=Path(__file__).resolve().parent.parent;data=json.loads((R/'shop-lane/catalog/groceries.json').read_text());server=subprocess.Popen(['python','-m','http.server','8765','--directory',str(R)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+try:
+ with sync_playwright() as p:
+  b=p.chromium.launch(headless=True,args=['--no-sandbox']);page=b.new_page(viewport={'width':1440,'height':1000});errors=[];page.on('pageerror',lambda e:errors.append(str(e)));image_requests=[];page.on('request',lambda r:image_requests.append(r.url) if 'images.openfoodfacts.org' in r.url else None)
+  started=time.time();page.goto('http://127.0.0.1:8765/shop-lane/');page.wait_for_selector('.product');print('Initial DOM ready in',round(time.time()-started,2),'seconds');assert page.locator('.product').count()==24;assert '20,000' in page.locator('#results').inner_text();print('Initial image requests',len(image_requests))
+  page.locator('#catalog').scroll_into_view_if_needed();page.wait_for_load_state('networkidle');None
+  page.locator('#next').click();assert page.locator('#pageNumber').input_value()=='2';assert '25–48' in page.locator('#results').inner_text();page.fill('#pageNumber','834');page.locator('#pageNumber').press('Tab');assert page.locator('.product').count()==8;assert page.locator('#next').is_disabled()
+  page.fill('#search',data[10000]['code']);page.wait_for_function('document.querySelectorAll(".product").length===1');assert data[10000]['name'] in page.locator('#grid').inner_text();page.locator('[data-detail]').click();assert page.locator('#detail').is_visible();assert 'Generated demo price' in page.locator('#detail').inner_text();page.locator('#detailAdd').click();assert page.locator('#cartCount').inner_text()=='1';None;page.locator('#closeDetail').click()
+  page.locator('[data-wish]').click();assert page.locator('#wishCount').inner_text()=='1';page.locator('#cartButton').click();assert page.locator('.cartItem').count()==1;page.locator('[data-inc]').click();assert page.locator('#cartCount').inner_text()=='2';page.locator('#closeCart').click();page.reload();page.wait_for_selector('.product');assert page.locator('#cartCount').inner_text()=='2';assert page.locator('#wishCount').inner_text()=='1'
+  page.locator('#cartButton').click();page.locator('#checkout').click();assert 'No real order' in page.locator('#checkoutMessage').inner_text();assert page.locator('#cartCount').inner_text()=='0';page.locator('#closeCart').click()
+  page.select_option('#category','Beverages');assert page.locator('.product').count()==24;page.locator('#resetFilters').click();page.select_option('#pageSize','96');assert page.locator('.product').count()==96;page.select_option('#sort','low');prices=page.locator('.productBottom strong').all_text_contents();assert float(prices[0][1:])<=float(prices[-1][1:]);page.select_option('#pageSize','24')
+  page.locator('#techCollection').click();page.wait_for_function('document.querySelector("#results").textContent.includes("12 in this collection")');assert page.locator('.product').count()==12;page.locator('.add').first.click();page.locator('#cartButton').click();assert page.locator('.cartItem').count()==1;page.locator('#closeCart').click()
+  page.locator('#groceryCollection').click();page.wait_for_function('document.querySelector("#results").textContent.includes("20,000 in this collection")');page.set_viewport_size({'width':390,'height':844});None;assert page.evaluate('document.documentElement.scrollWidth<=innerWidth');page.locator('#theme').click();assert 'light' in page.locator('body').get_attribute('class');None
+  print('All core tests passed. JS errors:',errors);assert not errors;print('Example source URL:',data[10000]['source']);b.close()
+finally:server.terminate();server.wait()

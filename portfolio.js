@@ -1,3 +1,38 @@
+const coverCopy = {
+  "paper-trade": ["NOVA", "EXCHANGE", "VIRTUAL MARKETS / REAL CURIOSITY"],
+  arcade: ["PLAY", "WITHOUT LIMITS", "FIVE GAMES. ONE PLAYGROUND."],
+  "shop-lane": ["EVERYDAY", "DISCOVERIES", "20,000 REAL PRODUCT RECORDS"],
+  taskly: ["MAKE", "THINGS HAPPEN", "A LITTLE CLARITY FOR YOUR DAY"],
+  "weather-now": ["UNDER", "THE SAME SKY", "YOUR WORLD / YOUR WEATHER"],
+  "cafe-landing": ["SLOW", "MORNINGS", "EMBER & OAK / COFFEE CULTURE"],
+  "flow-board": ["IDEAS", "IN MOTION", "FROM WHAT IF TO WHAT'S NEXT"],
+  "budget-lab": ["YOUR MONEY.", "YOUR DIRECTION.", "PLAN WITH PURPOSE"],
+  "invoice-studio": ["GOOD WORK.", "WELL PRESENTED.", "THE FINISHING TOUCH"],
+  "ink-notes": ["ROOM", "FOR THOUGHT", "CAPTURE WHAT COMES NEXT"],
+  "habit-garden": ["SMALL STEPS.", "REAL GROWTH.", "A DAILY PRACTICE"],
+  "focus-room": ["DO LESS.", "FOCUS MORE.", "A SPACE FOR DEEP WORK"],
+  "calendar-studio": [
+    "MAKE TIME",
+    "FOR WHAT MATTERS",
+    "YOUR DAYS / THOUGHTFULLY ARRANGED",
+  ],
+  "split-bills": ["SHARED MOMENTS.", "FAIR SHARES.", "KEEP THE GOOD COMPANY"],
+  "client-desk": [
+    "BETTER",
+    "CONNECTIONS",
+    "A LITTLE STRUCTURE GOES A LONG WAY",
+  ],
+  "stock-room": ["EVERYTHING", "IN ITS PLACE", "KNOW YOUR NEXT MOVE"],
+  "route-book": ["TAKE THE", "SCENIC ROUTE", "MAKE ROOM FOR DISCOVERY"],
+  "meal-studio": ["A BETTER", "KIND OF TABLE", "FRESH IDEAS / EVERY DAY"],
+  "workout-log": ["SHOW UP.", "BUILD ON IT.", "YOUR PROGRESS / YOUR PACE"],
+  "quiz-academy": ["STAY", "CURIOUS", "TEST AN IDEA. LEARN SOMETHING."],
+  "sound-lab": ["MAKE", "SOME NOISE", "YOUR NEXT SOUND STARTS HERE"],
+  "image-studio": ["A NEW", "PERSPECTIVE", "SEE WHAT A LITTLE CHANGE CAN DO"],
+  pathfinder: ["FIND", "YOUR WAY", "EXPLORE THE PATH LESS OBVIOUS"],
+  "type-racer": ["FIND YOUR", "RHYTHM", "ONE KEY AT A TIME"],
+  "data-lens": ["SEE THE", "BIGGER PICTURE", "FROM ROWS TO REVELATIONS"],
+};
 let projects = [];
 const $ = (s) => document.querySelector(s),
   $$ = (s) => [...document.querySelectorAll(s)];
@@ -57,7 +92,7 @@ function render() {
     list
       .map((p) => {
         let i = projects.indexOf(p);
-        return `<a class="project" href="${p[0]}/" style="--c:${p[5]}"><div class="cover"><span class="coverNumber">EXPERIMENT ${String(i + 1).padStart(2, "0")}</span><span class="coverArrow">↗</span><div class="previewFrame"><img src="assets/previews/${p[0]}.webp" alt="${p[1]} interface preview" loading="lazy" width="1080" height="720"></div></div><div class="projectmeta"><h3>${p[1]}</h3><span>${p[2]}</span></div><p>${p[3]}</p></a>`;
+        return `<a class="project" href="${p[0]}/${p[0] === "shop-lane" ? "?v=5" : ""}" style="--c:${p[5]}"><div class="cover"><span class="coverNumber">EXPERIMENT ${String(i + 1).padStart(2, "0")}</span><span class="coverArrow">↗</span><img class="coverPhoto" src="assets/covers/${p[0]}.webp" alt="${coverCopy[p[0]][2]} themed photograph" loading="lazy" width="1200" height="760"><div class="coverShade"></div><div class="coverWords"><span>${coverCopy[p[0]][2]}</span><strong>${coverCopy[p[0]][0]}<br>${coverCopy[p[0]][1]}</strong></div><span class="coverSymbol">${p[4]}</span></div><div class="projectmeta"><h3>${p[1]}</h3><span>${p[2]}</span></div><p>${p[3]}</p></a>`;
       })
       .join("") || "<p>No projects match. Try another search.</p>";
 }

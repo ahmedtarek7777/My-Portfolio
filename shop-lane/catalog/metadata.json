@@ -1,0 +1,13 @@
+{
+  "count": 20000,
+  "uniqueBarcodes": 20000,
+  "uniqueNameBrandQuantity": 20000,
+  "source": "https://static.openfoodfacts.org/data/en.openfoodfacts.org.products.csv.gz",
+  "sourcePublisher": "Open Food Facts and contributors",
+  "downloaded": "2026-11-21",
+  "license": "ODbL-1.0",
+  "individualContentsLicense": "DbCL-1.0",
+  "imageLicense": "CC-BY-SA",
+  "priceNotice": "Generated demo prices in USD. Not live retailer offers.",
+  "examinedRows": 73247
+}

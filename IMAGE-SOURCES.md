@@ -17,4 +17,4 @@ https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-
 
 Catalog APIs: https://dummyjson.com/products/category/laptops , https://dummyjson.com/products/category/smartphones , https://dummyjson.com/products/category/mens-shoes
 
-The gallery preview images are screenshots of these running frontend demos, created for this portfolio.
+Project cards use themed Unsplash photographs, not app screenshots. See COVER-CREDITS.md for each cover source and license.
