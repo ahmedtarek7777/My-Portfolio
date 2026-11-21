@@ -855,14 +855,6 @@ body.compact .previewFrame {
   letter-spacing: -1.7px;
   display: block;
 }
-.coverSymbol {
-  position: absolute;
-  right: 26px;
-  top: 25px;
-  font-size: 39px;
-  color: #fff;
-  opacity: 0.75;
-}
 .coverArrow {
   display: none;
 }
@@ -887,9 +879,6 @@ body.compact .coverWords > span {
 body.compact .coverWords strong {
   font-size: 20px;
   letter-spacing: -0.6px;
-}
-body.compact .coverSymbol {
-  display: none;
 }
 body.compact .coverNumber {
   font-size: 6px;
