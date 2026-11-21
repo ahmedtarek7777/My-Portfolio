@@ -92,7 +92,7 @@ function render() {
     list
       .map((p) => {
         let i = projects.indexOf(p);
-        return `<a class="project" href="${p[0]}/${p[0] === "shop-lane" ? "?v=5" : ""}" style="--c:${p[5]}"><div class="cover"><span class="coverNumber">EXPERIMENT ${String(i + 1).padStart(2, "0")}</span><span class="coverArrow">↗</span><img class="coverPhoto" src="assets/covers/${p[0]}.webp" alt="${coverCopy[p[0]][2]} themed photograph" loading="lazy" width="1200" height="760"><div class="coverShade"></div><div class="coverWords"><span>${coverCopy[p[0]][2]}</span><strong>${coverCopy[p[0]][0]}<br>${coverCopy[p[0]][1]}</strong></div><span class="coverSymbol">${p[4]}</span></div><div class="projectmeta"><h3>${p[1]}</h3><span>${p[2]}</span></div><p>${p[3]}</p></a>`;
+        return `<a class="project" href="${p[0]}/${p[0] === "shop-lane" ? "?v=5" : ""}" style="--c:${p[5]}"><div class="cover"><span class="coverNumber">EXPERIMENT ${String(i + 1).padStart(2, "0")}</span><span class="coverArrow">↗</span><img class="coverPhoto" src="assets/covers/${p[0]}.${coverCopy[p[0]] ? "webp" : "svg"}" alt="${(coverCopy[p[0]] || [p[1], "Try it out", p[3]])[2]} themed photograph" loading="lazy" width="1200" height="760"><div class="coverShade"></div><div class="coverWords"><span>${(coverCopy[p[0]] || [p[1], "Try it out", p[3]])[2]}</span><strong>${(coverCopy[p[0]] || [p[1], "Try it out", p[3]])[0]}<br>${(coverCopy[p[0]] || [p[1], "Try it out", p[3]])[1]}</strong></div><span class="coverSymbol">${p[4]}</span></div><div class="projectmeta"><h3>${p[1]}</h3><span>${p[2]}</span></div><p>${p[3]}</p></a>`;
       })
       .join("") || "<p>No projects match. Try another search.</p>";
 }

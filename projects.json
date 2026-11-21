@@ -4,7 +4,7 @@
     "NOVA Exchange",
     "Finance",
     "Paper trading, portfolio analytics and a simulated market.",
-    "↗",
+    "\u2197",
     "#a98af2"
   ],
   [
@@ -12,7 +12,7 @@
     "PLAY / LAB",
     "Games",
     "Five games, personal bests and instant play.",
-    "✦",
+    "\u2726",
     "#e6bd74"
   ],
   [
@@ -20,7 +20,7 @@
     "Shop Lane",
     "Commerce",
     "20,000 real grocery records, product search, saved items and a demo cart.",
-    "◈",
+    "\u25c8",
     "#82c8bd"
   ],
   [
@@ -28,7 +28,7 @@
     "Taskly",
     "Productivity",
     "Plan your day with drag-and-drop tasks and dark mode.",
-    "✓",
+    "\u2713",
     "#e49db1"
   ],
   [
@@ -36,7 +36,7 @@
     "Weather Now",
     "Tools",
     "City search, live conditions and a five-day forecast.",
-    "☀",
+    "\u2600",
     "#85b5ec"
   ],
   [
@@ -44,7 +44,7 @@
     "Ember & Oak",
     "Experiences",
     "An atmospheric cafe concept and local demo booking.",
-    "♨",
+    "\u2668",
     "#c49a73"
   ],
   [
@@ -52,7 +52,7 @@
     "Flow Board",
     "Productivity",
     "A project board with priorities, search, movable cards and JSON backup.",
-    "◈",
+    "\u25c8",
     "#aac8dd"
   ],
   [
@@ -60,7 +60,7 @@
     "Budget Lab",
     "Finance",
     "Income, expenses, category budgets, charts and transaction exports.",
-    "◒",
+    "\u25d2",
     "#95c9ac"
   ],
   [
@@ -68,7 +68,7 @@
     "Invoice Studio",
     "Business",
     "Editable line items, tax, discounts, saved drafts and print-ready invoices.",
-    "▤",
+    "\u25a4",
     "#c8bb91"
   ],
   [
@@ -76,7 +76,7 @@
     "Ink Notes",
     "Productivity",
     "A searchable notebook with tags, safe Markdown preview and export.",
-    "✎",
+    "\u270e",
     "#c6a1c8"
   ],
   [
@@ -84,7 +84,7 @@
     "Habit Garden",
     "Lifestyle",
     "Habit tracking with weekly history, streaks and completion analytics.",
-    "❀",
+    "\u2740",
     "#b8ce8c"
   ],
   [
@@ -92,7 +92,7 @@
     "Focus Room",
     "Productivity",
     "A configurable focus timer with breaks, task queue and session log.",
-    "◷",
+    "\u25f7",
     "#9eaad2"
   ],
   [
@@ -100,7 +100,7 @@
     "Daylight Calendar",
     "Productivity",
     "Monthly planning with event editing, reminders on the page and ICS export.",
-    "▦",
+    "\u25a6",
     "#e0b38c"
   ],
   [
@@ -108,7 +108,7 @@
     "Fair Share",
     "Finance",
     "Group expenses, equal splits, net balances and simplified settlements.",
-    "⇄",
+    "\u21c4",
     "#98c2c9"
   ],
   [
@@ -116,7 +116,7 @@
     "Client Desk",
     "Business",
     "A local CRM with contacts, deal stages, notes, search and pipeline value.",
-    "◎",
+    "\u25ce",
     "#c8aad8"
   ],
   [
@@ -124,7 +124,7 @@
     "Stock Room",
     "Business",
     "Inventory with real product imagery, stock movements, low-stock flags and search.",
-    "▧",
+    "\u25a7",
     "#a6c2a2"
   ],
   [
@@ -132,7 +132,7 @@
     "Route Book",
     "Lifestyle",
     "A multi-day itinerary builder with budgets, packing and trip exports.",
-    "⌁",
+    "\u2301",
     "#9ac7c2"
   ],
   [
@@ -140,7 +140,7 @@
     "Meal Studio",
     "Lifestyle",
     "Recipe search, serving scaling, a weekly meal plan and shopping list.",
-    "◒",
+    "\u25d2",
     "#dcc78a"
   ],
   [
@@ -148,7 +148,7 @@
     "Rep Studio",
     "Lifestyle",
     "Workout sessions, exercise sets, training volume and personal records.",
-    "↟",
+    "\u219f",
     "#d6a094"
   ],
   [
@@ -156,7 +156,7 @@
     "Quiz Academy",
     "Learning",
     "Topic quizzes with explanations, review mode and progress history.",
-    "◇",
+    "\u25c7",
     "#a8bddd"
   ],
   [
@@ -164,7 +164,7 @@
     "Sound Lab",
     "Creative",
     "A browser synthesizer and step sequencer with tempo, waveforms and pattern storage.",
-    "♫",
+    "\u266b",
     "#b4a2d3"
   ],
   [
@@ -172,7 +172,7 @@
     "Pixel Studio",
     "Creative",
     "Private image editing with filters, rotation, resizing and PNG export.",
-    "▣",
+    "\u25a3",
     "#b1c7d9"
   ],
   [
@@ -180,7 +180,7 @@
     "Pathfinder",
     "Learning",
     "Interactive BFS and Dijkstra pathfinding with walls, weights and animation.",
-    "⌘",
+    "\u2318",
     "#a6c4ad"
   ],
   [
@@ -188,7 +188,7 @@
     "Type Racer",
     "Learning",
     "Timed typing practice with live accuracy, WPM, progress and personal history.",
-    "⌨",
+    "\u2328",
     "#b8abd5"
   ],
   [
@@ -196,7 +196,247 @@
     "Data Lens",
     "Business",
     "CSV import, numeric summaries, sortable tables, category charts and export.",
-    "▥",
+    "\u25a5",
     "#94b9c3"
+  ],
+  [
+    "snake",
+    "Snake",
+    "Games",
+    "Collect food with the arrow keys or movement buttons, and avoid the walls and your own tail.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "mines",
+    "Minesweeper",
+    "Games",
+    "Use the numbers to reveal safe squares and avoid the mines.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "connect-four",
+    "Connect Four",
+    "Games",
+    "Play with a friend on the same device. The first player to connect four pieces wins.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "breakout",
+    "Breakout",
+    "Games",
+    "Move the paddle and break every brick.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "sudoku",
+    "Mini Sudoku",
+    "Games",
+    "Fill the grid with 1 through 4 without repeating a number in any row, column, or box.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "sliding-puzzle",
+    "Sliding Number Puzzle",
+    "Games",
+    "Slide the tiles until the numbers are in order.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "word-guess",
+    "Word Guess",
+    "Games",
+    "Guess the hidden word before you run out of tries.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "lights-out",
+    "Lights Out",
+    "Games",
+    "Tap the squares to switch off the entire board.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "simon",
+    "Simon Says",
+    "Games",
+    "Watch and listen to the sequence, then repeat it.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "maze-run",
+    "Maze Run",
+    "Games",
+    "Find your way to the exit without crossing the walls.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "pong",
+    "Pong",
+    "Games",
+    "Challenge the computer with a paddle and ball.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "sky-hop",
+    "Sky Hop",
+    "Games",
+    "Fly between the columns and keep your height under control.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "whack",
+    "Whack-a-Target",
+    "Games",
+    "Tap the target before it moves and rack up points.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "math-duel",
+    "Math Duel",
+    "Games",
+    "Solve as many math problems as you can before time runs out.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "drawing-board",
+    "Drawing Board",
+    "Creative",
+    "Draw with touch or a mouse, undo a stroke, and download your artwork.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "pixel-art",
+    "Pixel Art",
+    "Creative",
+    "Color small squares to create a pixel-art drawing.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "gradient-lab",
+    "Gradient Lab",
+    "Creative",
+    "Combine gradient colors and copy the CSS code.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "palette-lab",
+    "Color Palette Lab",
+    "Creative",
+    "Build a harmonious color palette and save your colors.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "type-studio",
+    "Typography Studio",
+    "Creative",
+    "Try different fonts and spacing, then download your design.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "svg-studio",
+    "Shape Studio",
+    "Creative",
+    "Create vector shapes and download them as an SVG.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "particle-lab",
+    "Particle Playground",
+    "Creative",
+    "Adjust the motion and attraction to make the particles dance.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "fractal-lab",
+    "Fractal Lab",
+    "Creative",
+    "Zoom into the Mandelbrot set and explore its details.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "mandala",
+    "Mandala Drawing",
+    "Creative",
+    "Draw with radial symmetry to create a mandala.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "audio-visualizer",
+    "Audio Visualizer",
+    "Creative",
+    "Open an audio file from your device and watch its frequencies move.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "noise-maker",
+    "Noise Maker",
+    "Creative",
+    "Mix white, pink, and brown noise for a focused listening session.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "drum-machine",
+    "Drum Machine",
+    "Creative",
+    "Arrange drum sounds across 16 steps and save your rhythm.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "pattern-lab",
+    "Pattern Lab",
+    "Creative",
+    "Design a repeating pattern and download it as an image.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "translator",
+    "Translator",
+    "Tools",
+    "Translate real text, listen to the result, and copy it.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "code-studio",
+    "Code Studio",
+    "Tools",
+    "A multi-file editor with 20 languages and an isolated web preview.",
+    "\u2726",
+    "#99cfc4"
+  ],
+  [
+    "site-assistant",
+    "Portfolio Assistant",
+    "Tools",
+    "An AI-powered assistant that answers questions about Ahmed's projects and the information published on the site.",
+    "\u2726",
+    "#99cfc4"
   ]
 ]

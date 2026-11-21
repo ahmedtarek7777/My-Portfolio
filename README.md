@@ -63,3 +63,12 @@ The store renders only 24, 48 or 96 items at a time, with page navigation/jump, 
 ## Project cover art
 
 The gallery cards use themed web-sourced photographs with custom typography and color treatment, not screenshots from inside the apps. Photo source pages and license credits are in `COVER-CREDITS.md` and `assets/covers/credits.json`. Files are stored locally for reliable loading.
+
+
+## November expansion
+
+55 separate project routes, including 15 Games and 15 Creative projects. New tools: 20-language Monaco editor with HTML/CSS/JavaScript sandbox execution (other languages are editing only), MyMemory translator, and an integrated portfolio assistant. The assistant uses the published portfolio as its knowledge base. Optional real multilingual semantic search runs in the browser using Transformers.js and the 118 MB quantized Xenova/paraphrase-multilingual-MiniLM-L12-v2 model. It is retrieval, not general-purpose generative chat. Keyword search remains available without downloading the model. Questions are not sent to a hosted chat API.
+
+Noise Maker generates white, pink and brown noise locally. Audio starts after a user gesture and awaits AudioContext.resume() before scheduling sound. Audio output was tested with an analyser at the destination for Noise Maker, Sound Lab and Drum Machine. Device mute switches, browser background suspension and hardware volume remain under the visitor's control.
+
+External runtime dependencies: Monaco Editor 0.52.2 from jsDelivr (MIT), Transformers.js 3.7.3 from jsDelivr (Apache-2.0), model files from Hugging Face (Apache-2.0). Translation text is sent to api.mymemory.translated.net only after clicking Translate; public service quotas and availability apply. Weather remains Open-Meteo. No API keys are embedded.
