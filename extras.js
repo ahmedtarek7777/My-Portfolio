@@ -581,12 +581,43 @@ async function assistant() {
           (r) => (r.score = v.reduce((s, x, j) => s + x * vectors[r.i][j], 0)),
         );
         ranked.sort((a, b) => b.score - a.score);
-        if (ranked[0].score < 0.23) ranked = [];
+        if (ranked[0].score < 0.3) ranked = [];
       } else ranked.sort((a, b) => b.score - a.score);
       if (/احمد|صاحب|who.*ahmed|owner|about ahmed/.test(n))
         ranked = [{ d: docs[0], score: 10 }];
       else if (/كام|عدد|how many|total/.test(n))
         ranked = [{ d: docs[1], score: 10 }];
+      const intents = [
+        [
+          /كود|اكواد|برمج|بايثون|جافا|code|python|javascript|programming|editor/i,
+          "code-studio",
+        ],
+        [/ترجم|مترجم|translation|translate|translator/i, "translator"],
+        [/ضوض|اصوات ثابته|noise|background sound|steady sound/i, "noise-maker"],
+        [/طقس|الجو|weather|forecast/i, "weather-now"],
+        [/سوبر|متجر|منتجات|سوق|تسوق|shop|store|grocer|products/i, "shop-lane"],
+        [/لحن|نغم|موسيقي|music|synth|piano/i, "sound-lab"],
+      ];
+      const intent = intents.find(([pattern]) => pattern.test(n));
+      if (intent) {
+        const doc = docs.find((d) => d.url === "../" + intent[1] + "/");
+        if (doc) ranked = [{ d: doc, score: 10 }];
+      }
+      if (
+        /رقم.*(احمد|تليفون|موبايل)|عمر.*احمد|كلمه.*سر|phone|password|private|age.*ahmed/.test(
+          n,
+        )
+      ) {
+        add(
+          T("المساعد", "Assistant"),
+          T(
+            "المعلومة دي مش موجودة في معلومات المعرض المنشورة اللي عندي. مش هخمن بيانات شخصية. تقدر تشوف وسيلة التواصل اللي أحمد ناشرها في الموقع.",
+            "That is not in my published portfolio knowledge. I will not guess personal details. You can see Ahmed's published contact option on the site.",
+          ),
+          [{ title: T("التواصل", "Contact"), url: "../#contact" }],
+        );
+        return;
+      }
       let group = /العاب|games/.test(n)
         ? T("ألعاب", "Games")
         : /ابداع|creative/.test(n)
@@ -603,7 +634,13 @@ async function assistant() {
           matches.map((p) => ({ title: p[1], url: "../" + p[0] + "/" })),
         );
       } else {
-        let top = ranked.filter((r) => r.score > 0).slice(0, 3);
+        let top = ranked
+          .filter(
+            (r) =>
+              r.score > 0 &&
+              (!embed || r.score >= (ranked[0]?.score || 0) - 0.04),
+          )
+          .slice(0, 3);
         if (!top.length)
           add(
             T("المساعد", "Assistant"),
