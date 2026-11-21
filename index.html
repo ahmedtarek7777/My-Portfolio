@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#101115" />
     <title>Ahmed Tarek / Digital experiences</title>
-    <link rel="stylesheet" href="style.css?v=5" />
+    <link rel="stylesheet" href="style.css?v=7" />
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
@@ -31,7 +31,7 @@
     <a class="skip" href="#work">Skip to projects</a>
     <header>
       <a href="#" class="logo">ahmed<span>✳</span></a>
-      <nav>
+      <nav><a id="searchLink" href="#projectSearch">⌕ Search projects</a>
         <a href="#work">The work</a><a href="#about">The approach</a
         ><a href="#contact">Say hello ↗</a>
       </nav>
@@ -159,17 +159,12 @@
             project, try the details, make it yours.
           </p>
         </div>
-        <div class="filterbar">
-          <div id="filters"></div>
-          <label class="search"
-            >⌕
-            <input
-              id="search"
-              placeholder="Find a project..."
-              aria-label="Search projects"
-          /></label>
-        </div>
-        <div id="projectCount"></div>
+        <div class="projectSearch" id="projectSearch">
+<label for="search">Search all 55 projects</label>
+<div class="searchField"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="What would you like to explore?" aria-describedby="searchHint" autocomplete="off"><button id="clearSearch" type="button" hidden aria-label="Clear search">×</button></div>
+<p id="searchHint">Find a name or an idea, in English or Arabic. Try: Snake, drawing, code.</p></div>
+<div class="filterbar"><div id="filters"></div></div>
+        <div id="projectCount" role="status" aria-live="polite" aria-atomic="true"></div>
         <div id="projects" class="projects"></div>
         <p class="disclaimer">
           Portfolio demos, not commercial services. Data stays in your browser
@@ -244,6 +239,6 @@
       "
       >Cover photography credits / Unsplash License ↗</a
     >
-    <script src="portfolio.js?v=6"></script>
+    <script src="portfolio.js?v=7"></script>
   <script src="assistant-widget.js?v=6" defer></script></body>
 </html>

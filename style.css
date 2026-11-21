@@ -913,3 +913,20 @@ body.compact .coverNumber {
     letter-spacing: 1.2px;
   }
 }
+
+/* Project discovery: a visible search destination for the full gallery. */
+.projectSearch{scroll-margin-top:110px;border:1px solid var(--line);background:color-mix(in srgb,var(--accent) 7%,var(--bg));border-radius:18px;padding:24px;margin:28px 0 22px}
+.projectSearch>label{display:block;font-size:18px;font-weight:600;margin-bottom:12px}
+.searchField{display:flex;align-items:center;gap:12px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:4px 16px;min-height:58px}
+.searchField:focus-within{outline:2px solid var(--accent);outline-offset:3px}
+.searchField>span{font-size:30px;color:var(--accent)}
+.searchField input{width:100%;min-width:0;border:0;background:none;outline:none;color:var(--text);font:inherit;font-size:16px;padding:12px 0}
+.searchField button{flex-shrink:0;min-width:44px;min-height:44px;padding:4px;font-size:25px;border:0}
+.searchField [hidden]{display:none}
+#searchHint{font-size:12px;color:var(--muted);margin:12px 0 0}
+.filterbar{border-top:0;padding-top:0}
+#projectCount{font-size:12px}
+#searchLink{color:var(--accent)}
+@media(max-width:800px){header{height:auto;min-height:75px;flex-wrap:wrap;gap:14px;padding-block:14px}header nav{order:3;width:100%;justify-content:center;gap:18px;flex-wrap:wrap}#settingsButton{margin-inline-start:auto}.projectSearch{padding:18px;scroll-margin-top:150px}.projectSearch>label{font-size:17px}.searchField{padding-inline:12px}}
+
+.searchField input::-webkit-search-cancel-button{display:none}
