@@ -17,7 +17,7 @@ h2{font-size:2rem;margin-bottom:16px}
 .skills li{background:#1b1f2b;padding:6px 16px;border-radius:999px;font-size:.9rem}
 .note{color:#7d8296;margin-bottom:20px;font-size:.9rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.card{background:#171a24;border-radius:16px;padding:16px;transition:transform .2s}
+.card{display:block;background:#171a24;border-radius:16px;padding:16px;transition:transform .2s}
 .card:hover{transform:translateY(-6px)}
 .card h3{margin:12px 0 6px}
 .card p{color:#b5b9c6;font-size:.95rem}

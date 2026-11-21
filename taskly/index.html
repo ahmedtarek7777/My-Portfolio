@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taskly — Plan your day</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <h1>Taskly<span>.</span></h1>
+  <button id="theme" class="theme" aria-label="Toggle dark mode">🌙</button>
+</header>
+
+<main class="app">
+  <form id="addForm" class="add">
+    <input id="newTask" type="text" placeholder="Add a task and press Enter" autocomplete="off" maxlength="140">
+    <select id="newTag" aria-label="Tag">
+      <option value="personal">Personal</option>
+      <option value="work">Work</option>
+      <option value="urgent">Urgent</option>
+    </select>
+    <button type="submit">Add</button>
+  </form>
+
+  <div class="stats">
+    <span id="leftCount">0 left</span>
+    <div class="filters">
+      <button data-f="all" class="active">All</button>
+      <button data-f="active">Active</button>
+      <button data-f="done">Done</button>
+    </div>
+    <button id="clearDone" class="clear">Clear done</button>
+  </div>
+
+  <ul id="list" class="list"></ul>
+  <p id="empty" class="empty">No tasks here. Enjoy the calm. 🌿</p>
+  <p class="hint">Drag tasks to reorder. Everything is saved in your browser.</p>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
