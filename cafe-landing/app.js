@@ -29,7 +29,7 @@ form.addEventListener("submit", e=>{
   }
   const pretty = new Date(date+"T12:00:00").toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
   document.getElementById("doneText").textContent =
-    `${name}, your table for ${guests} is set for ${pretty} at ${time}. We'll keep the kettle on.`;
+    `${name}, this demo captured a request for ${guests} on ${pretty} at ${time}. No reservation has been made or sent.`;
   form.hidden = true;
   document.getElementById("done").hidden = false;
 });

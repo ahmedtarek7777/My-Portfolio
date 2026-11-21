@@ -43,3 +43,5 @@ body.dark .tag.urgent{background:#7f1d1d55;color:#fca5a5}
 .del:hover{color:#ef4444}
 .empty{text-align:center;color:var(--muted);padding:40px 0}
 .hint{text-align:center;color:var(--muted);font-size:.8rem;margin-top:18px}
+
+[hidden]{display:none!important}

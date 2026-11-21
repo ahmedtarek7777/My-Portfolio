@@ -14,3 +14,7 @@ https://cdn.dummyjson.com/product-images/mens-shoes/nike-air-jordan-1-red-and-bl
 https://cdn.dummyjson.com/product-images/mens-shoes/nike-baseball-cleats/thumbnail.webp
 https://cdn.dummyjson.com/product-images/mens-shoes/puma-future-rider-trainers/thumbnail.webp
 https://cdn.dummyjson.com/product-images/mens-shoes/sports-sneakers-off-white-&-red/thumbnail.webp
+
+Catalog APIs: https://dummyjson.com/products/category/laptops , https://dummyjson.com/products/category/smartphones , https://dummyjson.com/products/category/mens-shoes
+
+The gallery preview images are screenshots of these running frontend demos, created for this portfolio.

@@ -42,3 +42,5 @@ footer{text-align:center;padding:34px;color:#a08f78;font-size:.85rem;border-top:
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+[hidden]{display:none!important}

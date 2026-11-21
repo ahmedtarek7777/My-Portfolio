@@ -1,7 +1,7 @@
 const PRODUCTS = [{"id": 1, "name": "Apple MacBook Pro 14 Inch Space Grey", "cat": "laptops", "price": 1999.99, "rating": 3.65, "emoji": "\ud83d\udecd", "image": "../assets/products/0.webp"}, {"id": 2, "name": "Asus Zenbook Pro Dual Screen Laptop", "cat": "laptops", "price": 1799.99, "rating": 3.95, "emoji": "\ud83d\udecd", "image": "../assets/products/1.webp"}, {"id": 3, "name": "Huawei Matebook X Pro", "cat": "laptops", "price": 1399.99, "rating": 4.98, "emoji": "\ud83d\udecd", "image": "../assets/products/2.webp"}, {"id": 4, "name": "Lenovo Yoga 920", "cat": "laptops", "price": 1099.99, "rating": 2.86, "emoji": "\ud83d\udecd", "image": "../assets/products/3.webp"}, {"id": 5, "name": "iPhone 5s", "cat": "smartphones", "price": 199.99, "rating": 2.83, "emoji": "\ud83d\udecd", "image": "../assets/products/4.webp"}, {"id": 6, "name": "iPhone 6", "cat": "smartphones", "price": 299.99, "rating": 3.41, "emoji": "\ud83d\udecd", "image": "../assets/products/5.webp"}, {"id": 7, "name": "iPhone 13 Pro", "cat": "smartphones", "price": 1099.99, "rating": 4.12, "emoji": "\ud83d\udecd", "image": "../assets/products/6.webp"}, {"id": 8, "name": "iPhone X", "cat": "smartphones", "price": 899.99, "rating": 2.51, "emoji": "\ud83d\udecd", "image": "../assets/products/7.webp"}, {"id": 9, "name": "Nike Air Jordan 1 Red And Black", "cat": "mens-shoes", "price": 149.99, "rating": 4.77, "emoji": "\ud83d\udecd", "image": "../assets/products/8.webp"}, {"id": 10, "name": "Nike Baseball Cleats", "cat": "mens-shoes", "price": 79.99, "rating": 3.88, "emoji": "\ud83d\udecd", "image": "../assets/products/9.webp"}, {"id": 11, "name": "Puma Future Rider Trainers", "cat": "mens-shoes", "price": 89.99, "rating": 4.9, "emoji": "\ud83d\udecd", "image": "../assets/products/10.webp"}, {"id": 12, "name": "Sports Sneakers Off White & Red", "cat": "mens-shoes", "price": 119.99, "rating": 4.77, "emoji": "\ud83d\udecd", "image": "../assets/products/11.webp"}];
 
 const state = {cat:"all", q:"", max:5000, sort:"featured"};
-const cart = new Map(JSON.parse(localStorage.getItem("shoplane-cart")||"[]"));
+const cart = new Map(JSON.parse(localStorage.getItem("shoplane-cart-v2")||"[]"));
 
 const $ = s => document.querySelector(s);
 const grid = $("#grid"), catsEl = $("#categories");
@@ -53,7 +53,7 @@ function renderGrid(){
   });
 }
 
-function saveCart(){ localStorage.setItem("shoplane-cart", JSON.stringify([...cart])); }
+function saveCart(){ localStorage.setItem("shoplane-cart-v2", JSON.stringify([...cart])); }
 
 function addToCart(id){
   cart.set(id, (cart.get(id)||0)+1);
