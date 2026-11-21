@@ -1,1 +1,116 @@
-let habits=load('habit-garden',[{id:1,name:'Read 20 minutes',category:'Learning',days:[]},{id:2,name:'Take a walk',category:'Wellbeing',days:[]}]),offset=0;const dateKey=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');function days(){let d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()-(d.getDay()+6)%7+offset*7);return Array.from({length:7},(_,i)=>{let n=new Date(d);n.setDate(n.getDate()+i);return n})}function streak(h){let d=new Date(),n=0;if(!h.days.includes(dateKey(d)))d.setDate(d.getDate()-1);while(h.days.includes(dateKey(d))){n++;d.setDate(d.getDate()-1)}return n}function render(){save('habit-garden',habits);let ds=days(),today=dateKey(new Date());$('#stats').innerHTML=[['Active habits',habits.length],['Done today',habits.filter(h=>h.days.includes(today)).length],['Best current streak',Math.max(0,...habits.map(streak))+' days']].map(([k,v])=>`<div class="panel"><span class="muted">${k}</span><div class="metric">${v}</div></div>`).join('');$('#grid').innerHTML='<table><tr><th>Habit</th>'+ds.map(d=>`<th>${d.toLocaleDateString('en',{weekday:'short',day:'numeric',month:'short'})}</th>`).join('')+'<th>Streak</th><th></th></tr>'+habits.map(h=>`<tr><td><strong>${esc(h.name)}</strong><br><small>${esc(h.category)}</small></td>${ds.map(d=>{let k=dateKey(d);return `<td><button data-id="${h.id}" data-date="${k}" ${k>today?'disabled':''} aria-label="${esc(h.name)} ${k}" style="color:${h.days.includes(k)?'var(--green)':'var(--muted)'}">${h.days.includes(k)?'✓':'·'}</button></td>`}).join('')}<td>${streak(h)} days</td><td><button data-del="${h.id}" aria-label="Delete habit">×</button></td></tr>`).join('')+'</table>';$$('[data-date]').forEach(b=>b.onclick=()=>{let h=habits.find(h=>h.id===+b.dataset.id),d=b.dataset.date;h.days=h.days.includes(d)?h.days.filter(x=>x!==d):[...h.days,d];render()});$$('[data-del]').forEach(b=>b.onclick=()=>{if(confirm('Remove this habit and its history?')){habits=habits.filter(h=>h.id!==+b.dataset.del);render()}})}$('#add').onsubmit=e=>{e.preventDefault();if(!$('#name').value.trim())return;habits.push({id:Date.now(),name:$('#name').value.trim(),category:$('#category').value,days:[]});$('#name').value='';render()};$('#prev').onclick=()=>{offset--;render()};$('#next').onclick=()=>{offset++;render()};$('#today').onclick=()=>{offset=0;render()};$('#export').onclick=()=>download('habits.json',JSON.stringify(habits,null,2));render();
+let habits = load("habit-garden", [
+    { id: 1, name: "Read 20 minutes", category: "Learning", days: [] },
+    { id: 2, name: "Take a walk", category: "Wellbeing", days: [] },
+  ]),
+  offset = 0;
+const dateKey = (d) =>
+  d.getFullYear() +
+  "-" +
+  String(d.getMonth() + 1).padStart(2, "0") +
+  "-" +
+  String(d.getDate()).padStart(2, "0");
+function days() {
+  let d = new Date();
+  d.setHours(12, 0, 0, 0);
+  d.setDate(d.getDate() - ((d.getDay() + 6) % 7) + offset * 7);
+  return Array.from({ length: 7 }, (_, i) => {
+    let n = new Date(d);
+    n.setDate(n.getDate() + i);
+    return n;
+  });
+}
+function streak(h) {
+  let d = new Date(),
+    n = 0;
+  if (!h.days.includes(dateKey(d))) d.setDate(d.getDate() - 1);
+  while (h.days.includes(dateKey(d))) {
+    n++;
+    d.setDate(d.getDate() - 1);
+  }
+  return n;
+}
+function render() {
+  save("habit-garden", habits);
+  let ds = days(),
+    today = dateKey(new Date());
+  $("#stats").innerHTML = [
+    ["Active habits", habits.length],
+    ["Done today", habits.filter((h) => h.days.includes(today)).length],
+    ["Best current streak", Math.max(0, ...habits.map(streak)) + " days"],
+  ]
+    .map(
+      ([k, v]) =>
+        `<div class="panel"><span class="muted">${k}</span><div class="metric">${v}</div></div>`,
+    )
+    .join("");
+  $("#grid").innerHTML =
+    "<table><tr><th>Habit</th>" +
+    ds
+      .map(
+        (d) =>
+          `<th>${d.toLocaleDateString("en", { weekday: "short", day: "numeric", month: "short" })}</th>`,
+      )
+      .join("") +
+    "<th>Streak</th><th></th></tr>" +
+    habits
+      .map(
+        (h) =>
+          `<tr><td><strong>${esc(h.name)}</strong><br><small>${esc(h.category)}</small></td>${ds
+            .map((d) => {
+              let k = dateKey(d);
+              return `<td><button data-id="${h.id}" data-date="${k}" ${k > today ? "disabled" : ""} aria-label="${esc(h.name)} ${k}" style="color:${h.days.includes(k) ? "var(--green)" : "var(--muted)"}">${h.days.includes(k) ? "✓" : "·"}</button></td>`;
+            })
+            .join(
+              "",
+            )}<td>${streak(h)} days</td><td><button data-del="${h.id}" aria-label="Delete habit">×</button></td></tr>`,
+      )
+      .join("") +
+    "</table>";
+  $$("[data-date]").forEach(
+    (b) =>
+      (b.onclick = () => {
+        let h = habits.find((h) => h.id === +b.dataset.id),
+          d = b.dataset.date;
+        h.days = h.days.includes(d)
+          ? h.days.filter((x) => x !== d)
+          : [...h.days, d];
+        render();
+      }),
+  );
+  $$("[data-del]").forEach(
+    (b) =>
+      (b.onclick = () => {
+        if (confirm("Remove this habit and its history?")) {
+          habits = habits.filter((h) => h.id !== +b.dataset.del);
+          render();
+        }
+      }),
+  );
+}
+$("#add").onsubmit = (e) => {
+  e.preventDefault();
+  if (!$("#name").value.trim()) return;
+  habits.push({
+    id: Date.now(),
+    name: $("#name").value.trim(),
+    category: $("#category").value,
+    days: [],
+  });
+  $("#name").value = "";
+  render();
+};
+$("#prev").onclick = () => {
+  offset--;
+  render();
+};
+$("#next").onclick = () => {
+  offset++;
+  render();
+};
+$("#today").onclick = () => {
+  offset = 0;
+  render();
+};
+$("#export").onclick = () =>
+  download("habits.json", JSON.stringify(habits, null, 2));
+render();

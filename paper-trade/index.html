@@ -1,1 +1,107 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NOVA Exchange | Ahmed Studio</title><link rel="stylesheet" href="../studio.css?v=3"><body style="--accent:#a98af2"><header class="appbar"><a class="brand" href="./">NOVA Exchange<span style="color:var(--accent)">.</span></a><div class="actions"><a class="button" href="../#work">← All projects</a><button id="theme" aria-label="Toggle color theme">◐</button></div></header><main class="workspace"><div class="titlebar"><div><span class="badge">Ahmed Studio / Interactive demo</span><h1>A smarter place to practice.</h1></div><span class="muted">Local-first · No account required</span></div><div class="notice">SIMULATION ONLY. All prices and movements are generated demo data, not live quotes. Virtual USD only. No real trades, deposits, advice or brokerage connection.</div><div class="grid cols4" id="metrics"></div><div class="grid cols2" style="margin-top:22px"><section class="panel"><div class="row"><div><span class="muted">Market overview</span><h2 id="chartTitle">AAPL / Apple</h2></div><div class="actions"><select id="asset" aria-label="Chart asset"></select><button id="step">Next session ↗</button></div></div><canvas id="chart" width="900" height="300" aria-label="Simulated price history"></canvas><div id="markets" class="tablewrap"></div></section><aside class="panel"><h2>Place a paper trade</h2><form id="trade" class="stack"><label>Instrument<select id="symbol"></select></label><label>Side<select id="side"><option value="buy">Buy</option><option value="sell">Sell</option></select></label><label>Quantity<input id="qty" type="number" min="1" max="100000" step="1" value="1" required></label><div class="row"><span class="muted">Estimated value</span><strong id="estimate"></strong></div><button class="primary">Execute virtual order</button></form><p>Orders fill instantly at the simulated displayed price. No leverage or short selling.</p><hr style="border:0;border-top:1px solid var(--line)"><h2>Risk controls</h2><p>Build a position, diversify your portfolio and track your performance across simulated sessions.</p><button id="export">Export trade journal</button><button id="reset" style="margin-top:10px">Reset virtual account</button></aside></div><div class="grid cols2" style="margin-top:22px"><section class="panel"><h2>Your positions</h2><div id="positions" class="tablewrap"></div></section><section class="panel"><h2>Order history</h2><div id="history" class="tablewrap"></div></section></div></main><script src="../studio.js?v=3"></script><script src="app.js?v=3"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>NOVA Exchange | Ahmed Studio</title
+  ><link rel="stylesheet" href="../studio.css?v=3" />
+  <body style="--accent: #a98af2">
+    <header class="appbar">
+      <a class="brand" href="./"
+        >NOVA Exchange<span style="color: var(--accent)">.</span></a
+      >
+      <div class="actions">
+        <a class="button" href="../#work">← All projects</a
+        ><button id="theme" aria-label="Toggle color theme">◐</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <div class="titlebar">
+        <div>
+          <span class="badge">Ahmed Studio / Interactive demo</span>
+          <h1>A smarter place to practice.</h1>
+        </div>
+        <span class="muted">Local-first · No account required</span>
+      </div>
+      <div class="notice">
+        SIMULATION ONLY. All prices and movements are generated demo data, not
+        live quotes. Virtual USD only. No real trades, deposits, advice or
+        brokerage connection.
+      </div>
+      <div class="grid cols4" id="metrics"></div>
+      <div class="grid cols2" style="margin-top: 22px">
+        <section class="panel">
+          <div class="row">
+            <div>
+              <span class="muted">Market overview</span>
+              <h2 id="chartTitle">AAPL / Apple</h2>
+            </div>
+            <div class="actions">
+              <select id="asset" aria-label="Chart asset"></select
+              ><button id="step">Next session ↗</button>
+            </div>
+          </div>
+          <canvas
+            id="chart"
+            width="900"
+            height="300"
+            aria-label="Simulated price history"
+          ></canvas>
+          <div id="markets" class="tablewrap"></div>
+        </section>
+        <aside class="panel">
+          <h2>Place a paper trade</h2>
+          <form id="trade" class="stack">
+            <label>Instrument<select id="symbol"></select></label
+            ><label
+              >Side<select id="side">
+                <option value="buy">Buy</option>
+                <option value="sell">Sell</option>
+              </select></label
+            ><label
+              >Quantity<input
+                id="qty"
+                type="number"
+                min="1"
+                max="100000"
+                step="1"
+                value="1"
+                required
+            /></label>
+            <div class="row">
+              <span class="muted">Estimated value</span
+              ><strong id="estimate"></strong>
+            </div>
+            <button class="primary">Execute virtual order</button>
+          </form>
+          <p>
+            Orders fill instantly at the simulated displayed price. No leverage
+            or short selling.
+          </p>
+          <hr style="border: 0; border-top: 1px solid var(--line)" />
+          <h2>Risk controls</h2>
+          <p>
+            Build a position, diversify your portfolio and track your
+            performance across simulated sessions.
+          </p>
+          <button id="export">Export trade journal</button
+          ><button id="reset" style="margin-top: 10px">
+            Reset virtual account
+          </button>
+        </aside>
+      </div>
+      <div class="grid cols2" style="margin-top: 22px">
+        <section class="panel">
+          <h2>Your positions</h2>
+          <div id="positions" class="tablewrap"></div>
+        </section>
+        <section class="panel">
+          <h2>Order history</h2>
+          <div id="history" class="tablewrap"></div>
+        </section>
+      </div>
+    </main>
+    <script src="../studio.js?v=3"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>

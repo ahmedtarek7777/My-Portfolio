@@ -1,1 +1,76 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daylight Calendar | Ahmed Studio</title><link rel="stylesheet" href="../studio.css?v=3"><body style="--accent:#e0b38c"><header class="appbar"><a class="brand" href="./">Daylight Calendar<span style="color:var(--accent)">.</span></a><div class="actions"><a class="button" href="../#work">← All projects</a><button id="theme" aria-label="Toggle color theme">◐</button></div></header><main class="workspace"><div class="titlebar"><div><span class="badge">Ahmed Studio / Interactive demo</span><h1>Your time, thoughtfully arranged.</h1></div><span class="muted">Local-first · No account required</span></div><div class="grid cols2"><section class="panel"><div class="row"><h2 id="monthName"></h2><div class="actions"><button id="prev">←</button><button id="today">Today</button><button id="next">→</button></div></div><div id="calendar" style="display:grid;grid-template-columns:repeat(7,1fr);gap:7px"></div></section><aside class="panel"><h2 id="dayTitle"></h2><div id="events"></div><h2 style="margin-top:25px">Add an event</h2><form id="add" class="stack"><label>Title<input id="title" required maxlength="100"></label><label>Date<input id="date" type="date" required></label><div class="grid cols2"><label>Start<input id="time" type="time" value="09:00" required></label><label>End<input id="end" type="time" value="10:00" required></label></div><label>Notes<textarea id="notes"></textarea></label><button class="primary">Save event</button></form><p>Device-local calendar, not synced with Google or Apple. Times use your device's timezone.</p><button id="export">Export .ics calendar</button></aside></div></main><script src="../studio.js?v=3"></script><script src="app.js?v=3"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Daylight Calendar | Ahmed Studio</title
+  ><link rel="stylesheet" href="../studio.css?v=3" />
+  <body style="--accent: #e0b38c">
+    <header class="appbar">
+      <a class="brand" href="./"
+        >Daylight Calendar<span style="color: var(--accent)">.</span></a
+      >
+      <div class="actions">
+        <a class="button" href="../#work">← All projects</a
+        ><button id="theme" aria-label="Toggle color theme">◐</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <div class="titlebar">
+        <div>
+          <span class="badge">Ahmed Studio / Interactive demo</span>
+          <h1>Your time, thoughtfully arranged.</h1>
+        </div>
+        <span class="muted">Local-first · No account required</span>
+      </div>
+      <div class="grid cols2">
+        <section class="panel">
+          <div class="row">
+            <h2 id="monthName"></h2>
+            <div class="actions">
+              <button id="prev">←</button><button id="today">Today</button
+              ><button id="next">→</button>
+            </div>
+          </div>
+          <div
+            id="calendar"
+            style="
+              display: grid;
+              grid-template-columns: repeat(7, 1fr);
+              gap: 7px;
+            "
+          ></div>
+        </section>
+        <aside class="panel">
+          <h2 id="dayTitle"></h2>
+          <div id="events"></div>
+          <h2 style="margin-top: 25px">Add an event</h2>
+          <form id="add" class="stack">
+            <label>Title<input id="title" required maxlength="100" /></label
+            ><label>Date<input id="date" type="date" required /></label>
+            <div class="grid cols2">
+              <label
+                >Start<input
+                  id="time"
+                  type="time"
+                  value="09:00"
+                  required /></label
+              ><label
+                >End<input id="end" type="time" value="10:00" required
+              /></label>
+            </div>
+            <label>Notes<textarea id="notes"></textarea></label
+            ><button class="primary">Save event</button>
+          </form>
+          <p>
+            Device-local calendar, not synced with Google or Apple. Times use
+            your device's timezone.
+          </p>
+          <button id="export">Export .ics calendar</button>
+        </aside>
+      </div>
+    </main>
+    <script src="../studio.js?v=3"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>

@@ -1,1 +1,77 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Type Racer | Ahmed Studio</title><link rel="stylesheet" href="../studio.css?v=3"><body style="--accent:#b8abd5"><header class="appbar"><a class="brand" href="./">Type Racer<span style="color:var(--accent)">.</span></a><div class="actions"><a class="button" href="../#work">← All projects</a><button id="theme" aria-label="Toggle color theme">◐</button></div></header><main class="workspace"><div class="titlebar"><div><span class="badge">Ahmed Studio / Interactive demo</span><h1>Find your rhythm on the keys.</h1></div><span class="muted">Local-first · No account required</span></div><div class="grid cols2"><section class="panel"><div class="row"><h2>Typing session</h2><select id="duration" aria-label="Session duration"><option value="30">30 seconds</option><option value="60" selected>60 seconds</option><option value="120">120 seconds</option></select></div><div id="stats" class="grid cols3" style="margin-bottom:25px"></div><div id="passage" style="font:22px/1.9 monospace;letter-spacing:1px;background:var(--bg);padding:25px;border-radius:12px"></div><textarea id="input" placeholder="Start typing here to begin..." aria-label="Typing input" spellcheck="false" autocomplete="off" style="width:100%;min-height:160px;margin-top:25px"></textarea><div class="actions" style="margin-top:20px"><button id="restart" class="primary">New session</button><button id="finish">Finish now</button></div><p id="result" role="status"></p></section><aside class="panel"><h2>Your personal best</h2><div id="best" class="metric"></div><p>WPM counts correctly typed characters, divided by five, per minute. Accuracy compares your current text to the passage. Backspace is allowed. Pasting does not count.</p><h2>Recent sessions</h2><div id="history"></div></aside></div></main><script src="../studio.js?v=3"></script><script src="app.js?v=3"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Type Racer | Ahmed Studio</title
+  ><link rel="stylesheet" href="../studio.css?v=3" />
+  <body style="--accent: #b8abd5">
+    <header class="appbar">
+      <a class="brand" href="./"
+        >Type Racer<span style="color: var(--accent)">.</span></a
+      >
+      <div class="actions">
+        <a class="button" href="../#work">← All projects</a
+        ><button id="theme" aria-label="Toggle color theme">◐</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <div class="titlebar">
+        <div>
+          <span class="badge">Ahmed Studio / Interactive demo</span>
+          <h1>Find your rhythm on the keys.</h1>
+        </div>
+        <span class="muted">Local-first · No account required</span>
+      </div>
+      <div class="grid cols2">
+        <section class="panel">
+          <div class="row">
+            <h2>Typing session</h2>
+            <select id="duration" aria-label="Session duration">
+              <option value="30">30 seconds</option>
+              <option value="60" selected>60 seconds</option>
+              <option value="120">120 seconds</option>
+            </select>
+          </div>
+          <div id="stats" class="grid cols3" style="margin-bottom: 25px"></div>
+          <div
+            id="passage"
+            style="
+              font: 22px/1.9 monospace;
+              letter-spacing: 1px;
+              background: var(--bg);
+              padding: 25px;
+              border-radius: 12px;
+            "
+          ></div>
+          <textarea
+            id="input"
+            placeholder="Start typing here to begin..."
+            aria-label="Typing input"
+            spellcheck="false"
+            autocomplete="off"
+            style="width: 100%; min-height: 160px; margin-top: 25px"
+          ></textarea>
+          <div class="actions" style="margin-top: 20px">
+            <button id="restart" class="primary">New session</button
+            ><button id="finish">Finish now</button>
+          </div>
+          <p id="result" role="status"></p>
+        </section>
+        <aside class="panel">
+          <h2>Your personal best</h2>
+          <div id="best" class="metric"></div>
+          <p>
+            WPM counts correctly typed characters, divided by five, per minute.
+            Accuracy compares your current text to the passage. Backspace is
+            allowed. Pasting does not count.
+          </p>
+          <h2>Recent sessions</h2>
+          <div id="history"></div>
+        </aside>
+      </div>
+    </main>
+    <script src="../studio.js?v=3"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>

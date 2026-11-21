@@ -1,80 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ember & Oak Cafe</title>
-<link rel="stylesheet" href="style.css?v=3">
-</head>
-<body><a href="../#work" style="display:block;text-align:center;background:#14151a;color:#eee;padding:10px;font:12px sans-serif">← Back to Ahmed's project gallery</a>
-<header class="nav">
-  <span class="logo">Ember <i>&</i> Oak</span>
-  <nav>
-    <a href="#menu">Menu</a><a href="#story">Story</a><a href="#book">Book a table</a>
-  </nav>
-</header><p style="text-align:center;font-size:12px;padding:10px">Fictional cafe concept. Booking form is a local demonstration only. No reservation is sent.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ember & Oak Cafe</title>
+    <link rel="stylesheet" href="style.css?v=3" />
+  </head>
+  <body>
+    <a
+      href="../#work"
+      style="
+        display: block;
+        text-align: center;
+        background: #14151a;
+        color: #eee;
+        padding: 10px;
+        font: 12px sans-serif;
+      "
+      >← Back to Ahmed's project gallery</a
+    >
+    <header class="nav">
+      <span class="logo">Ember <i>&</i> Oak</span>
+      <nav>
+        <a href="#menu">Menu</a><a href="#story">Story</a
+        ><a href="#book">Book a table</a>
+      </nav>
+    </header>
+    <p style="text-align: center; font-size: 12px; padding: 10px">
+      Fictional cafe concept. Booking form is a local demonstration only. No
+      reservation is sent.
+    </p>
 
-<section class="hero">
-  <p class="kicker reveal">Specialty coffee · Fresh pastry · Since 2019</p>
-  <h1 class="reveal d1">Slow mornings,<br>bold coffee.</h1>
-  <p class="sub reveal d2">A neighborhood cafe serving single-origin espresso, wood-fired pastries and quiet corners.</p>
-  <div class="cta reveal d3">
-    <a class="btn" href="#book">Book a table</a>
-    <a class="ghost" href="#menu">See the menu</a>
-  </div>
-  <div class="steam reveal d4" aria-hidden="true">☕</div>
-</section>
+    <section class="hero">
+      <p class="kicker reveal">Specialty coffee · Fresh pastry · Since 2019</p>
+      <h1 class="reveal d1">Slow mornings,<br />bold coffee.</h1>
+      <p class="sub reveal d2">
+        A neighborhood cafe serving single-origin espresso, wood-fired pastries
+        and quiet corners.
+      </p>
+      <div class="cta reveal d3">
+        <a class="btn" href="#book">Book a table</a>
+        <a class="ghost" href="#menu">See the menu</a>
+      </div>
+      <div class="steam reveal d4" aria-hidden="true">☕</div>
+    </section>
 
-<section id="menu">
-  <h2 class="reveal">The menu</h2>
-  <div class="menugrid">
-    <div class="dish reveal"><span class="e">☕</span><h4>Espresso</h4><p>Double shot, honey-toned crema.</p><b>45 EGP</b></div>
-    <div class="dish reveal"><span class="e">🥐</span><h4>Butter Croissant</h4><p>Laminated overnight, baked at dawn.</p><b>60 EGP</b></div>
-    <div class="dish reveal"><span class="e">🍵</span><h4>Matcha Latte</h4><p>Ceremonial grade, oat or dairy.</p><b>85 EGP</b></div>
-    <div class="dish reveal"><span class="e">🥞</span><h4>Ricotta Pancakes</h4><p>With date syrup and toasted nuts.</p><b>120 EGP</b></div>
-    <div class="dish reveal"><span class="e">🥤</span><h4>Cold Brew Tonic</h4><p>18-hour steep over citrus tonic.</p><b>90 EGP</b></div>
-    <div class="dish reveal"><span class="e">🍰</span><h4>Basque Cheesecake</h4><p>Burnt top, molten center.</p><b>95 EGP</b></div>
-  </div>
-</section>
+    <section id="menu">
+      <h2 class="reveal">The menu</h2>
+      <div class="menugrid">
+        <div class="dish reveal">
+          <span class="e">☕</span>
+          <h4>Espresso</h4>
+          <p>Double shot, honey-toned crema.</p>
+          <b>45 EGP</b>
+        </div>
+        <div class="dish reveal">
+          <span class="e">🥐</span>
+          <h4>Butter Croissant</h4>
+          <p>Laminated overnight, baked at dawn.</p>
+          <b>60 EGP</b>
+        </div>
+        <div class="dish reveal">
+          <span class="e">🍵</span>
+          <h4>Matcha Latte</h4>
+          <p>Ceremonial grade, oat or dairy.</p>
+          <b>85 EGP</b>
+        </div>
+        <div class="dish reveal">
+          <span class="e">🥞</span>
+          <h4>Ricotta Pancakes</h4>
+          <p>With date syrup and toasted nuts.</p>
+          <b>120 EGP</b>
+        </div>
+        <div class="dish reveal">
+          <span class="e">🥤</span>
+          <h4>Cold Brew Tonic</h4>
+          <p>18-hour steep over citrus tonic.</p>
+          <b>90 EGP</b>
+        </div>
+        <div class="dish reveal">
+          <span class="e">🍰</span>
+          <h4>Basque Cheesecake</h4>
+          <p>Burnt top, molten center.</p>
+          <b>95 EGP</b>
+        </div>
+      </div>
+    </section>
 
-<section id="story" class="story">
-  <h2 class="reveal">Our story</h2>
-  <p class="reveal">We started with one espresso machine and a borrowed oven. Six years later, Ember & Oak is where the neighborhood slows down. Beans roasted weekly, bread from our own wood fire, and a playlist we argue about every morning.</p>
-</section>
+    <section id="story" class="story">
+      <h2 class="reveal">Our story</h2>
+      <p class="reveal">
+        We started with one espresso machine and a borrowed oven. Six years
+        later, Ember & Oak is where the neighborhood slows down. Beans roasted
+        weekly, bread from our own wood fire, and a playlist we argue about
+        every morning.
+      </p>
+    </section>
 
-<section id="book">
-  <h2 class="reveal">Book a table</h2>
-  <form id="bookForm" class="form reveal" novalidate>
-    <label>Name<input id="name" type="text" placeholder="Your name" required></label>
-    <div class="row">
-      <label>Date<input id="date" type="date" required></label>
-      <label>Time
-        <select id="time" required>
-          <option value="">Pick...</option>
-          <option>9:00 AM</option><option>11:00 AM</option><option>1:00 PM</option>
-          <option>4:00 PM</option><option>6:00 PM</option><option>8:00 PM</option>
-        </select>
-      </label>
-      <label>Guests
-        <select id="guests" required>
-          <option value="">Pick...</option>
-          <option>1</option><option>2</option><option>3</option><option>4</option>
-          <option>5</option><option>6</option>
-        </select>
-      </label>
-    </div>
-    <p id="err" class="err" hidden></p>
-    <button class="btn" type="submit">Reserve</button>
-  </form>
-  <div id="done" class="done" hidden>
-    <span class="tick">✓</span>
-    <h3>See you soon!</h3>
-    <p id="doneText"></p>
-    <button id="again" class="ghost">Book another</button>
-  </div>
-</section>
+    <section id="book">
+      <h2 class="reveal">Book a table</h2>
+      <form id="bookForm" class="form reveal" novalidate>
+        <label
+          >Name<input id="name" type="text" placeholder="Your name" required
+        /></label>
+        <div class="row">
+          <label>Date<input id="date" type="date" required /></label>
+          <label
+            >Time
+            <select id="time" required>
+              <option value="">Pick...</option>
+              <option>9:00 AM</option>
+              <option>11:00 AM</option>
+              <option>1:00 PM</option>
+              <option>4:00 PM</option>
+              <option>6:00 PM</option>
+              <option>8:00 PM</option>
+            </select>
+          </label>
+          <label
+            >Guests
+            <select id="guests" required>
+              <option value="">Pick...</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+            </select>
+          </label>
+        </div>
+        <p id="err" class="err" hidden></p>
+        <button class="btn" type="submit">Reserve</button>
+      </form>
+      <div id="done" class="done" hidden>
+        <span class="tick">✓</span>
+        <h3>See you soon!</h3>
+        <p id="doneText"></p>
+        <button id="again" class="ghost">Book another</button>
+      </div>
+    </section>
 
-<footer>© 2026 Ember & Oak Cafe · Open daily 8 AM – 10 PM</footer>
-<script src="app.js?v=3"></script>
-</body>
+    <footer>© 2026 Ember & Oak Cafe · Open daily 8 AM – 10 PM</footer>
+    <script src="app.js?v=3"></script>
+  </body>
 </html>

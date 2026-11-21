@@ -1,1 +1,82 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Route Book | Ahmed Studio</title><link rel="stylesheet" href="../studio.css?v=3"><body style="--accent:#9ac7c2"><header class="appbar"><a class="brand" href="./">Route Book<span style="color:var(--accent)">.</span></a><div class="actions"><a class="button" href="../#work">← All projects</a><button id="theme" aria-label="Toggle color theme">◐</button></div></header><main class="workspace"><div class="titlebar"><div><span class="badge">Ahmed Studio / Interactive demo</span><h1>Good trips start with a clear plan.</h1></div><span class="muted">Local-first · No account required</span></div><div class="notice">Personal planning tool. No bookings, route estimates or availability checks are made. All costs are your own estimates in USD.</div><div class="grid cols3" id="stats"></div><div class="grid cols2" style="margin-top:25px"><section class="panel"><div class="row"><h2>Your itinerary</h2><input id="tripName" aria-label="Trip name" placeholder="Name this adventure"></div><div id="days"></div><button id="export">Export trip</button></section><aside class="panel"><h2>Add a stop</h2><form id="add" class="stack"><label>Day<input id="day" type="date" required></label><label>Time<input id="time" type="time" value="09:00" required></label><label>Place or activity<input id="title" required maxlength="120"></label><label>Estimated cost (USD)<input id="cost" type="number" min="0" step=".01" value="0" required></label><label>Notes<textarea id="notes"></textarea></label><button class="primary">Add to itinerary</button></form><h2 style="margin-top:30px">Packing checklist</h2><form id="packForm" class="actions"><input id="pack" placeholder="Passport, charger..." required aria-label="Packing item"><button>Add</button></form><div id="packing"></div></aside></div></main><script src="../studio.js?v=3"></script><script src="app.js?v=3"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Route Book | Ahmed Studio</title
+  ><link rel="stylesheet" href="../studio.css?v=3" />
+  <body style="--accent: #9ac7c2">
+    <header class="appbar">
+      <a class="brand" href="./"
+        >Route Book<span style="color: var(--accent)">.</span></a
+      >
+      <div class="actions">
+        <a class="button" href="../#work">← All projects</a
+        ><button id="theme" aria-label="Toggle color theme">◐</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <div class="titlebar">
+        <div>
+          <span class="badge">Ahmed Studio / Interactive demo</span>
+          <h1>Good trips start with a clear plan.</h1>
+        </div>
+        <span class="muted">Local-first · No account required</span>
+      </div>
+      <div class="notice">
+        Personal planning tool. No bookings, route estimates or availability
+        checks are made. All costs are your own estimates in USD.
+      </div>
+      <div class="grid cols3" id="stats"></div>
+      <div class="grid cols2" style="margin-top: 25px">
+        <section class="panel">
+          <div class="row">
+            <h2>Your itinerary</h2>
+            <input
+              id="tripName"
+              aria-label="Trip name"
+              placeholder="Name this adventure"
+            />
+          </div>
+          <div id="days"></div>
+          <button id="export">Export trip</button>
+        </section>
+        <aside class="panel">
+          <h2>Add a stop</h2>
+          <form id="add" class="stack">
+            <label>Day<input id="day" type="date" required /></label
+            ><label
+              >Time<input id="time" type="time" value="09:00" required /></label
+            ><label
+              >Place or activity<input
+                id="title"
+                required
+                maxlength="120" /></label
+            ><label
+              >Estimated cost (USD)<input
+                id="cost"
+                type="number"
+                min="0"
+                step=".01"
+                value="0"
+                required /></label
+            ><label>Notes<textarea id="notes"></textarea></label
+            ><button class="primary">Add to itinerary</button>
+          </form>
+          <h2 style="margin-top: 30px">Packing checklist</h2>
+          <form id="packForm" class="actions">
+            <input
+              id="pack"
+              placeholder="Passport, charger..."
+              required
+              aria-label="Packing item"
+            /><button>Add</button>
+          </form>
+          <div id="packing"></div>
+        </aside>
+      </div>
+    </main>
+    <script src="../studio.js?v=3"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>

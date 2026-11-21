@@ -7,6 +7,13 @@ try:
  with sync_playwright() as p:
   browser=p.chromium.launch()
   page=browser.new_page(viewport={"width":1360,"height":950})
+  page.goto('http://127.0.0.1:8765/paper-trade/')
+  page.locator('#trade button').click()
+  assert 'AAPL' in page.locator('#positions').inner_text()
+  page.goto('http://127.0.0.1:8765/arcade/')
+  assert page.locator('#board button').count()==16
+  page.get_by_role('button',name='2048',exact=True).click()
+  page.keyboard.press('ArrowLeft')
   errors=[]
   page.on("pageerror",lambda error:errors.append(str(error)))
   def go(slug):page.goto('http://127.0.0.1:8765/'+slug+'/')

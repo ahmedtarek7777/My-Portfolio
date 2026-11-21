@@ -1,1 +1,130 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pixel Studio | Ahmed Studio</title><link rel="stylesheet" href="../studio.css?v=3"><body style="--accent:#b1c7d9"><header class="appbar"><a class="brand" href="./">Pixel Studio<span style="color:var(--accent)">.</span></a><div class="actions"><a class="button" href="../#work">← All projects</a><button id="theme" aria-label="Toggle color theme">◐</button></div></header><main class="workspace"><div class="titlebar"><div><span class="badge">Ahmed Studio / Interactive demo</span><h1>A fresh perspective on every image.</h1></div><span class="muted">Local-first · No account required</span></div><div class="notice">Your images stay on this device. Nothing is uploaded. PNG export preserves the edited image, not its original metadata.</div><div class="grid cols2"><section class="panel"><div class="actions"><label class="button primary">Open an image<input id="file" type="file" accept="image/png,image/jpeg,image/webp" hidden></label><button id="sample">Use sample product</button><button id="download">Export PNG</button></div><div style="margin-top:25px;min-height:400px;display:grid;place-items:center;background:repeating-conic-gradient(#22242c 0% 25%,#292b33 0% 50%) 50%/20px 20px;border-radius:10px;overflow:hidden"><canvas id="canvas" width="800" height="600" style="max-height:600px;object-fit:contain"></canvas></div><p id="info"></p></section><aside class="panel"><h2>Develop your image</h2><div class="stack"><label>Brightness <output id="brightOut">100%</output><input id="brightness" type="range" min="0" max="200" value="100"></label><label>Contrast<input id="contrast" type="range" min="0" max="200" value="100"></label><label>Saturation<input id="saturation" type="range" min="0" max="200" value="100"></label><label>Grayscale<input id="gray" type="range" min="0" max="100" value="0"></label><label>Blur<input id="blur" type="range" min="0" max="10" step=".5" value="0"></label><label>Output width (px)<input id="width" type="number" min="50" max="4096" value="800"></label><div class="actions"><button id="rotate">Rotate 90°</button><button id="flip">Flip horizontally</button></div><button id="reset">Reset adjustments</button></div><p>Output maintains aspect ratio. Large images are limited to a maximum side of 4096 pixels for browser performance.</p></aside></div></main><script src="../studio.js?v=3"></script><script src="app.js?v=3"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Pixel Studio | Ahmed Studio</title
+  ><link rel="stylesheet" href="../studio.css?v=3" />
+  <body style="--accent: #b1c7d9">
+    <header class="appbar">
+      <a class="brand" href="./"
+        >Pixel Studio<span style="color: var(--accent)">.</span></a
+      >
+      <div class="actions">
+        <a class="button" href="../#work">← All projects</a
+        ><button id="theme" aria-label="Toggle color theme">◐</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <div class="titlebar">
+        <div>
+          <span class="badge">Ahmed Studio / Interactive demo</span>
+          <h1>A fresh perspective on every image.</h1>
+        </div>
+        <span class="muted">Local-first · No account required</span>
+      </div>
+      <div class="notice">
+        Your images stay on this device. Nothing is uploaded. PNG export
+        preserves the edited image, not its original metadata.
+      </div>
+      <div class="grid cols2">
+        <section class="panel">
+          <div class="actions">
+            <label class="button primary"
+              >Open an image<input
+                id="file"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+                hidden /></label
+            ><button id="sample">Use sample product</button
+            ><button id="download">Export PNG</button>
+          </div>
+          <div
+            style="
+              margin-top: 25px;
+              min-height: 400px;
+              display: grid;
+              place-items: center;
+              background: repeating-conic-gradient(
+                  #22242c 0% 25%,
+                  #292b33 0% 50%
+                )
+                50%/20px 20px;
+              border-radius: 10px;
+              overflow: hidden;
+            "
+          >
+            <canvas
+              id="canvas"
+              width="800"
+              height="600"
+              style="max-height: 600px; object-fit: contain"
+            ></canvas>
+          </div>
+          <p id="info"></p>
+        </section>
+        <aside class="panel">
+          <h2>Develop your image</h2>
+          <div class="stack">
+            <label
+              >Brightness <output id="brightOut">100%</output
+              ><input
+                id="brightness"
+                type="range"
+                min="0"
+                max="200"
+                value="100" /></label
+            ><label
+              >Contrast<input
+                id="contrast"
+                type="range"
+                min="0"
+                max="200"
+                value="100" /></label
+            ><label
+              >Saturation<input
+                id="saturation"
+                type="range"
+                min="0"
+                max="200"
+                value="100" /></label
+            ><label
+              >Grayscale<input
+                id="gray"
+                type="range"
+                min="0"
+                max="100"
+                value="0" /></label
+            ><label
+              >Blur<input
+                id="blur"
+                type="range"
+                min="0"
+                max="10"
+                step=".5"
+                value="0" /></label
+            ><label
+              >Output width (px)<input
+                id="width"
+                type="number"
+                min="50"
+                max="4096"
+                value="800"
+            /></label>
+            <div class="actions">
+              <button id="rotate">Rotate 90°</button
+              ><button id="flip">Flip horizontally</button>
+            </div>
+            <button id="reset">Reset adjustments</button>
+          </div>
+          <p>
+            Output maintains aspect ratio. Large images are limited to a maximum
+            side of 4096 pixels for browser performance.
+          </p>
+        </aside>
+      </div>
+    </main>
+    <script src="../studio.js?v=3"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>

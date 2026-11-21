@@ -1,1 +1,82 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stock Room | Ahmed Studio</title><link rel="stylesheet" href="../studio.css?v=3"><body style="--accent:#a6c2a2"><header class="appbar"><a class="brand" href="./">Stock Room<span style="color:var(--accent)">.</span></a><div class="actions"><a class="button" href="../#work">← All projects</a><button id="theme" aria-label="Toggle color theme">◐</button></div></header><main class="workspace"><div class="titlebar"><div><span class="badge">Ahmed Studio / Interactive demo</span><h1>Know what is on your shelf.</h1></div><span class="muted">Local-first · No account required</span></div><div id="stats" class="grid cols3"></div><div class="grid cols2" style="margin-top:25px"><section class="panel"><div class="row"><h2>Product inventory</h2><input id="search" aria-label="Search inventory" placeholder="Search products"></div><div class="actions"><label><input id="low" type="checkbox"> Low stock only</label><button id="export">Export inventory</button></div><div id="products"></div></section><aside class="panel"><h2>Add product</h2><form id="add" class="stack"><label>Product name<input id="name" required maxlength="100"></label><label>SKU<input id="sku" required maxlength="40"></label><label>Unit value (USD)<input id="price" type="number" min="0" step=".01" value="0" required></label><label>Initial quantity<input id="qty" type="number" min="0" step="1" value="0" required></label><label>Low-stock threshold<input id="threshold" type="number" min="0" value="5" required></label><button class="primary">Add product</button></form><h2 style="margin-top:30px">Movement log</h2><div id="log"></div></aside></div></main><script src="../studio.js?v=3"></script><script src="app.js?v=3"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Stock Room | Ahmed Studio</title
+  ><link rel="stylesheet" href="../studio.css?v=3" />
+  <body style="--accent: #a6c2a2">
+    <header class="appbar">
+      <a class="brand" href="./"
+        >Stock Room<span style="color: var(--accent)">.</span></a
+      >
+      <div class="actions">
+        <a class="button" href="../#work">← All projects</a
+        ><button id="theme" aria-label="Toggle color theme">◐</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <div class="titlebar">
+        <div>
+          <span class="badge">Ahmed Studio / Interactive demo</span>
+          <h1>Know what is on your shelf.</h1>
+        </div>
+        <span class="muted">Local-first · No account required</span>
+      </div>
+      <div id="stats" class="grid cols3"></div>
+      <div class="grid cols2" style="margin-top: 25px">
+        <section class="panel">
+          <div class="row">
+            <h2>Product inventory</h2>
+            <input
+              id="search"
+              aria-label="Search inventory"
+              placeholder="Search products"
+            />
+          </div>
+          <div class="actions">
+            <label><input id="low" type="checkbox" /> Low stock only</label
+            ><button id="export">Export inventory</button>
+          </div>
+          <div id="products"></div>
+        </section>
+        <aside class="panel">
+          <h2>Add product</h2>
+          <form id="add" class="stack">
+            <label
+              >Product name<input id="name" required maxlength="100" /></label
+            ><label>SKU<input id="sku" required maxlength="40" /></label
+            ><label
+              >Unit value (USD)<input
+                id="price"
+                type="number"
+                min="0"
+                step=".01"
+                value="0"
+                required /></label
+            ><label
+              >Initial quantity<input
+                id="qty"
+                type="number"
+                min="0"
+                step="1"
+                value="0"
+                required /></label
+            ><label
+              >Low-stock threshold<input
+                id="threshold"
+                type="number"
+                min="0"
+                value="5"
+                required /></label
+            ><button class="primary">Add product</button>
+          </form>
+          <h2 style="margin-top: 30px">Movement log</h2>
+          <div id="log"></div>
+        </aside>
+      </div>
+    </main>
+    <script src="../studio.js?v=3"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>

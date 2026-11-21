@@ -1,1 +1,58 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Flow Board | Ahmed Studio</title><link rel="stylesheet" href="../studio.css?v=3"><body style="--accent:#aac8dd"><header class="appbar"><a class="brand" href="./">Flow Board<span style="color:var(--accent)">.</span></a><div class="actions"><a class="button" href="../#work">← All projects</a><button id="theme" aria-label="Toggle color theme">◐</button></div></header><main class="workspace"><div class="titlebar"><div><span class="badge">Ahmed Studio / Interactive demo</span><h1>Big ideas. Clear next steps.</h1></div><span class="muted">Local-first · No account required</span></div><div class="actions" style="margin-bottom:22px"><input id="search" placeholder="Search your board" aria-label="Search board"><button id="export">Export board</button><label class="button">Import JSON<input id="import" type="file" accept=".json" hidden></label></div><form id="add" class="panel actions" style="margin-bottom:25px"><input id="title" required maxlength="160" placeholder="What needs to happen?" aria-label="Task title"><select id="priority" aria-label="Priority"><option>Normal</option><option>High</option><option>Low</option></select><input id="due" type="date" aria-label="Due date"><button class="primary">Add card</button></form><div id="board" class="grid cols3"></div></main><script src="../studio.js?v=3"></script><script src="app.js?v=3"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Flow Board | Ahmed Studio</title
+  ><link rel="stylesheet" href="../studio.css?v=3" />
+  <body style="--accent: #aac8dd">
+    <header class="appbar">
+      <a class="brand" href="./"
+        >Flow Board<span style="color: var(--accent)">.</span></a
+      >
+      <div class="actions">
+        <a class="button" href="../#work">← All projects</a
+        ><button id="theme" aria-label="Toggle color theme">◐</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <div class="titlebar">
+        <div>
+          <span class="badge">Ahmed Studio / Interactive demo</span>
+          <h1>Big ideas. Clear next steps.</h1>
+        </div>
+        <span class="muted">Local-first · No account required</span>
+      </div>
+      <div class="actions" style="margin-bottom: 22px">
+        <input
+          id="search"
+          placeholder="Search your board"
+          aria-label="Search board"
+        /><button id="export">Export board</button
+        ><label class="button"
+          >Import JSON<input id="import" type="file" accept=".json" hidden
+        /></label>
+      </div>
+      <form id="add" class="panel actions" style="margin-bottom: 25px">
+        <input
+          id="title"
+          required
+          maxlength="160"
+          placeholder="What needs to happen?"
+          aria-label="Task title"
+        /><select id="priority" aria-label="Priority">
+          <option>Normal</option>
+          <option>High</option>
+          <option>Low</option></select
+        ><input id="due" type="date" aria-label="Due date" /><button
+          class="primary"
+        >
+          Add card
+        </button>
+      </form>
+      <div id="board" class="grid cols3"></div>
+    </main>
+    <script src="../studio.js?v=3"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>

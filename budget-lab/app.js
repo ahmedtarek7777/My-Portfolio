@@ -1,1 +1,100 @@
-let tx=load('budget-tx',[]),budgets=load('budget-limits',{Food:400,Transport:150,Housing:1000,Leisure:200});$('#month').value=new Date().toISOString().slice(0,7);$('#date').value=new Date().toISOString().slice(0,10);function render(){save('budget-tx',tx);save('budget-limits',budgets);let items=tx.filter(t=>t.date.startsWith($('#month').value)),income=items.filter(x=>x.type==='Income').reduce((a,x)=>a+x.amount,0),expense=items.filter(x=>x.type==='Expense').reduce((a,x)=>a+x.amount,0);$('#stats').innerHTML=[['Income',income],['Expenses',expense],['Net cash flow',income-expense]].map(([k,v])=>`<div class="panel"><span class="muted">${k}</span><div class="metric">${money(v)}</div></div>`).join('');$('#transactions').innerHTML=items.length?'<table><tr><th>Description</th><th>Category</th><th>Date</th><th>Amount</th><th></th></tr>'+items.slice().reverse().map(t=>`<tr><td>${esc(t.description)}</td><td>${esc(t.category)}</td><td>${t.date}</td><td class="${t.type==='Income'?'positive':'negative'}">${t.type==='Income'?'+':'−'}${money(t.amount)}</td><td><button data-del="${t.id}" aria-label="Delete transaction">×</button></td></tr>`).join('')+'</table>':'<div class="empty">Start with your first transaction.</div>';$$('[data-del]').forEach(b=>b.onclick=()=>{tx=tx.filter(t=>t.id!==+b.dataset.del);render()});$('#budgets').innerHTML=Object.keys(budgets).map(c=>{let used=items.filter(t=>t.category===c&&t.type==='Expense').reduce((a,t)=>a+t.amount,0);return `<div><label>${c} limit (USD)<input data-budget="${c}" type="number" min="1" value="${budgets[c]}"></label><p>${money(used)} of ${money(budgets[c])}</p><progress value="${used}" max="${budgets[c]}"></progress><small>${used>budgets[c]?'Over limit':money(budgets[c]-used)+' remaining'}</small></div>`}).join('');$$('[data-budget]').forEach(b=>b.onchange=()=>{budgets[b.dataset.budget]=Math.max(1,+b.value||1);render()});let g=$('#chart').getContext('2d');g.clearRect(0,0,750,240);g.font='14px sans-serif';g.fillStyle='#969eaf';let max=Math.max(income,expense,1);[['Income',income,'#79e6bd'],['Expenses',expense,'#c2a6ff']].forEach(([k,v,c],i)=>{g.fillStyle=c;g.fillRect(100,50+i*85,v/max*580,35);g.fillStyle='#969eaf';g.fillText(k,0,74+i*85);g.fillText(money(v),100,40+i*85)})}$('#add').onsubmit=e=>{e.preventDefault();tx.push({id:Date.now(),description:$('#description').value.trim(),amount:+$('#amount').value,type:$('#type').value,category:$('#category').value,date:$('#date').value});$('#description').value='';$('#amount').value='';render()};$('#month').onchange=render;$('#export').onclick=()=>download('budget.json',JSON.stringify({transactions:tx,budgets},null,2));render();
+let tx = load("budget-tx", []),
+  budgets = load("budget-limits", {
+    Food: 400,
+    Transport: 150,
+    Housing: 1000,
+    Leisure: 200,
+  });
+$("#month").value = new Date().toISOString().slice(0, 7);
+$("#date").value = new Date().toISOString().slice(0, 10);
+function render() {
+  save("budget-tx", tx);
+  save("budget-limits", budgets);
+  let items = tx.filter((t) => t.date.startsWith($("#month").value)),
+    income = items
+      .filter((x) => x.type === "Income")
+      .reduce((a, x) => a + x.amount, 0),
+    expense = items
+      .filter((x) => x.type === "Expense")
+      .reduce((a, x) => a + x.amount, 0);
+  $("#stats").innerHTML = [
+    ["Income", income],
+    ["Expenses", expense],
+    ["Net cash flow", income - expense],
+  ]
+    .map(
+      ([k, v]) =>
+        `<div class="panel"><span class="muted">${k}</span><div class="metric">${money(v)}</div></div>`,
+    )
+    .join("");
+  $("#transactions").innerHTML = items.length
+    ? "<table><tr><th>Description</th><th>Category</th><th>Date</th><th>Amount</th><th></th></tr>" +
+      items
+        .slice()
+        .reverse()
+        .map(
+          (t) =>
+            `<tr><td>${esc(t.description)}</td><td>${esc(t.category)}</td><td>${t.date}</td><td class="${t.type === "Income" ? "positive" : "negative"}">${t.type === "Income" ? "+" : "−"}${money(t.amount)}</td><td><button data-del="${t.id}" aria-label="Delete transaction">×</button></td></tr>`,
+        )
+        .join("") +
+      "</table>"
+    : '<div class="empty">Start with your first transaction.</div>';
+  $$("[data-del]").forEach(
+    (b) =>
+      (b.onclick = () => {
+        tx = tx.filter((t) => t.id !== +b.dataset.del);
+        render();
+      }),
+  );
+  $("#budgets").innerHTML = Object.keys(budgets)
+    .map((c) => {
+      let used = items
+        .filter((t) => t.category === c && t.type === "Expense")
+        .reduce((a, t) => a + t.amount, 0);
+      return `<div><label>${c} limit (USD)<input data-budget="${c}" type="number" min="1" value="${budgets[c]}"></label><p>${money(used)} of ${money(budgets[c])}</p><progress value="${used}" max="${budgets[c]}"></progress><small>${used > budgets[c] ? "Over limit" : money(budgets[c] - used) + " remaining"}</small></div>`;
+    })
+    .join("");
+  $$("[data-budget]").forEach(
+    (b) =>
+      (b.onchange = () => {
+        budgets[b.dataset.budget] = Math.max(1, +b.value || 1);
+        render();
+      }),
+  );
+  let g = $("#chart").getContext("2d");
+  g.clearRect(0, 0, 750, 240);
+  g.font = "14px sans-serif";
+  g.fillStyle = "#969eaf";
+  let max = Math.max(income, expense, 1);
+  [
+    ["Income", income, "#79e6bd"],
+    ["Expenses", expense, "#c2a6ff"],
+  ].forEach(([k, v, c], i) => {
+    g.fillStyle = c;
+    g.fillRect(100, 50 + i * 85, (v / max) * 580, 35);
+    g.fillStyle = "#969eaf";
+    g.fillText(k, 0, 74 + i * 85);
+    g.fillText(money(v), 100, 40 + i * 85);
+  });
+}
+$("#add").onsubmit = (e) => {
+  e.preventDefault();
+  tx.push({
+    id: Date.now(),
+    description: $("#description").value.trim(),
+    amount: +$("#amount").value,
+    type: $("#type").value,
+    category: $("#category").value,
+    date: $("#date").value,
+  });
+  $("#description").value = "";
+  $("#amount").value = "";
+  render();
+};
+$("#month").onchange = render;
+$("#export").onclick = () =>
+  download(
+    "budget.json",
+    JSON.stringify({ transactions: tx, budgets }, null, 2),
+  );
+render();

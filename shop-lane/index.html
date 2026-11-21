@@ -1,59 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shop Lane — Storefront</title>
-<link rel="stylesheet" href="style.css?v=3">
-</head>
-<body><a href="../#work" style="display:block;text-align:center;background:#14151a;color:#eee;padding:10px;font:12px sans-serif">← Back to Ahmed's project gallery</a>
-<header class="topbar">
-  <a class="brand" href="#">Shop<span>Lane</span></a>
-  <div class="searchwrap">
-    <input id="search" type="search" placeholder="Search products..." aria-label="Search products">
-  </div>
-  <button id="cartBtn" class="cartbtn" aria-label="Open cart">
-    🛒 <span id="cartCount" class="count">0</span>
-  </button>
-</header><p style="text-align:center;padding:8px">Demo store · Real product photography · Illustrative prices · No orders or payments</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shop Lane — Storefront</title>
+    <link rel="stylesheet" href="style.css?v=3" />
+  </head>
+  <body>
+    <a
+      href="../#work"
+      style="
+        display: block;
+        text-align: center;
+        background: #14151a;
+        color: #eee;
+        padding: 10px;
+        font: 12px sans-serif;
+      "
+      >← Back to Ahmed's project gallery</a
+    >
+    <header class="topbar">
+      <a class="brand" href="#">Shop<span>Lane</span></a>
+      <div class="searchwrap">
+        <input
+          id="search"
+          type="search"
+          placeholder="Search products..."
+          aria-label="Search products"
+        />
+      </div>
+      <button id="cartBtn" class="cartbtn" aria-label="Open cart">
+        🛒 <span id="cartCount" class="count">0</span>
+      </button>
+    </header>
+    <p style="text-align: center; padding: 8px">
+      Demo store · Real product photography · Illustrative prices · No orders or
+      payments
+    </p>
 
-<div class="layout">
-  <aside class="filters">
-    <h3>Category</h3>
-    <div id="categories" class="cats"></div>
-    <h3>Max price</h3>
-    <input id="price" type="range" min="10" max="5000" value="5000" step="5">
-    <div class="priceval">Up to $<span id="priceVal">5000</span></div>
-    <h3>Sort</h3>
-    <select id="sort">
-      <option value="featured">Featured</option>
-      <option value="low">Price: low to high</option>
-      <option value="high">Price: high to low</option>
-      <option value="rating">Top rated</option>
-    </select>
-  </aside>
+    <div class="layout">
+      <aside class="filters">
+        <h3>Category</h3>
+        <div id="categories" class="cats"></div>
+        <h3>Max price</h3>
+        <input
+          id="price"
+          type="range"
+          min="10"
+          max="5000"
+          value="5000"
+          step="5"
+        />
+        <div class="priceval">Up to $<span id="priceVal">5000</span></div>
+        <h3>Sort</h3>
+        <select id="sort">
+          <option value="featured">Featured</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+          <option value="rating">Top rated</option>
+        </select>
+      </aside>
 
-  <main>
-    <p id="resultInfo" class="resultinfo"></p>
-    <div id="grid" class="grid"></div>
-    <p id="empty" class="empty" hidden>No products match your filters.</p>
-  </main>
-</div>
+      <main>
+        <p id="resultInfo" class="resultinfo"></p>
+        <div id="grid" class="grid"></div>
+        <p id="empty" class="empty" hidden>No products match your filters.</p>
+      </main>
+    </div>
 
-<div id="overlay" class="overlay" hidden></div>
-<aside id="drawer" class="drawer" aria-label="Shopping cart">
-  <div class="drawerhead">
-    <h2>Your cart</h2>
-    <button id="closeCart" class="x" aria-label="Close cart">✕</button>
-  </div>
-  <div id="cartItems" class="cartitems"></div>
-  <div class="drawerfoot">
-    <div class="total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
-    <button id="checkout" class="checkout">Checkout</button>
-    <p id="checkoutMsg" class="checkoutmsg" hidden></p>
-  </div>
-</aside>
+    <div id="overlay" class="overlay" hidden></div>
+    <aside id="drawer" class="drawer" aria-label="Shopping cart">
+      <div class="drawerhead">
+        <h2>Your cart</h2>
+        <button id="closeCart" class="x" aria-label="Close cart">✕</button>
+      </div>
+      <div id="cartItems" class="cartitems"></div>
+      <div class="drawerfoot">
+        <div class="total">
+          <span>Total</span><strong id="cartTotal">$0.00</strong>
+        </div>
+        <button id="checkout" class="checkout">Checkout</button>
+        <p id="checkoutMsg" class="checkoutmsg" hidden></p>
+      </div>
+    </aside>
 
-<script src="app.js?v=3"></script>
-</body>
+    <script src="app.js?v=3"></script>
+  </body>
 </html>

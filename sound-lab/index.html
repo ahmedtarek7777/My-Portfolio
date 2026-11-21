@@ -1,1 +1,94 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sound Lab | Ahmed Studio</title><link rel="stylesheet" href="../studio.css?v=3"><body style="--accent:#b4a2d3"><header class="appbar"><a class="brand" href="./">Sound Lab<span style="color:var(--accent)">.</span></a><div class="actions"><a class="button" href="../#work">← All projects</a><button id="theme" aria-label="Toggle color theme">◐</button></div></header><main class="workspace"><div class="titlebar"><div><span class="badge">Ahmed Studio / Interactive demo</span><h1>Make something you can hear.</h1></div><span class="muted">Local-first · No account required</span></div><div class="notice">Audio starts only when you press Play or a note. Start with your device volume low.</div><div class="grid cols2"><section class="panel"><div class="row"><h2>Step sequencer</h2><div class="actions"><button class="primary" id="play">Play pattern</button><button id="clear">Clear</button></div></div><div id="sequencer" class="tablewrap"></div><h2 style="margin-top:35px">Touch keys</h2><div id="keys" class="actions"></div><p>Play notes with mouse or touch. The sequencer uses a 16-step loop.</p></section><aside class="panel"><h2>Your sound</h2><div class="stack"><label>Tempo <span id="bpmLabel">110 BPM</span><input id="bpm" type="range" min="55" max="180" value="110"></label><label>Waveform<select id="wave"><option>sine</option><option>triangle</option><option>square</option><option>sawtooth</option></select></label><label>Volume<input id="volume" type="range" min="0" max=".3" step=".01" value=".08"></label><label>Note length<input id="length" type="range" min=".05" max=".8" step=".05" value=".2"></label><button id="save">Save pattern</button><button id="load">Load saved pattern</button><button id="export">Export pattern JSON</button></div><p>Synthesis is generated on your device with Web Audio. No music files are uploaded or streamed.</p></aside></div></main><script src="../studio.js?v=3"></script><script src="app.js?v=3"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Sound Lab | Ahmed Studio</title
+  ><link rel="stylesheet" href="../studio.css?v=3" />
+  <body style="--accent: #b4a2d3">
+    <header class="appbar">
+      <a class="brand" href="./"
+        >Sound Lab<span style="color: var(--accent)">.</span></a
+      >
+      <div class="actions">
+        <a class="button" href="../#work">← All projects</a
+        ><button id="theme" aria-label="Toggle color theme">◐</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <div class="titlebar">
+        <div>
+          <span class="badge">Ahmed Studio / Interactive demo</span>
+          <h1>Make something you can hear.</h1>
+        </div>
+        <span class="muted">Local-first · No account required</span>
+      </div>
+      <div class="notice">
+        Audio starts only when you press Play or a note. Start with your device
+        volume low.
+      </div>
+      <div class="grid cols2">
+        <section class="panel">
+          <div class="row">
+            <h2>Step sequencer</h2>
+            <div class="actions">
+              <button class="primary" id="play">Play pattern</button
+              ><button id="clear">Clear</button>
+            </div>
+          </div>
+          <div id="sequencer" class="tablewrap"></div>
+          <h2 style="margin-top: 35px">Touch keys</h2>
+          <div id="keys" class="actions"></div>
+          <p>
+            Play notes with mouse or touch. The sequencer uses a 16-step loop.
+          </p>
+        </section>
+        <aside class="panel">
+          <h2>Your sound</h2>
+          <div class="stack">
+            <label
+              >Tempo <span id="bpmLabel">110 BPM</span
+              ><input
+                id="bpm"
+                type="range"
+                min="55"
+                max="180"
+                value="110" /></label
+            ><label
+              >Waveform<select id="wave">
+                <option>sine</option>
+                <option>triangle</option>
+                <option>square</option>
+                <option>sawtooth</option>
+              </select></label
+            ><label
+              >Volume<input
+                id="volume"
+                type="range"
+                min="0"
+                max=".3"
+                step=".01"
+                value=".08" /></label
+            ><label
+              >Note length<input
+                id="length"
+                type="range"
+                min=".05"
+                max=".8"
+                step=".05"
+                value=".2" /></label
+            ><button id="save">Save pattern</button
+            ><button id="load">Load saved pattern</button
+            ><button id="export">Export pattern JSON</button>
+          </div>
+          <p>
+            Synthesis is generated on your device with Web Audio. No music files
+            are uploaded or streamed.
+          </p>
+        </aside>
+      </div>
+    </main>
+    <script src="../studio.js?v=3"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>

@@ -1,1 +1,67 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Client Desk | Ahmed Studio</title><link rel="stylesheet" href="../studio.css?v=3"><body style="--accent:#c8aad8"><header class="appbar"><a class="brand" href="./">Client Desk<span style="color:var(--accent)">.</span></a><div class="actions"><a class="button" href="../#work">← All projects</a><button id="theme" aria-label="Toggle color theme">◐</button></div></header><main class="workspace"><div class="titlebar"><div><span class="badge">Ahmed Studio / Interactive demo</span><h1>A little structure. Better relationships.</h1></div><span class="muted">Local-first · No account required</span></div><div class="notice">Fictional local CRM demo. Nothing is sent to contacts. Avoid storing sensitive customer data.</div><div id="stats" class="grid cols3"></div><div class="grid cols2" style="margin-top:25px"><section class="panel"><div class="row"><h2>Your pipeline</h2><input id="search" aria-label="Search contacts" placeholder="Search contacts"></div><div id="contacts"></div></section><aside class="panel"><h2>Add a contact</h2><form id="add" class="stack"><label>Name<input id="name" required maxlength="80"></label><label>Company<input id="company" maxlength="80"></label><label>Email<input id="email" type="email"></label><label>Deal value (USD)<input id="value" type="number" min="0" max="100000000" step=".01" value="0"></label><label>Notes<textarea id="notes"></textarea></label><button class="primary">Save contact</button></form><button id="export" style="margin-top:20px">Export contacts</button></aside></div></main><script src="../studio.js?v=3"></script><script src="app.js?v=3"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  /><title>Client Desk | Ahmed Studio</title
+  ><link rel="stylesheet" href="../studio.css?v=3" />
+  <body style="--accent: #c8aad8">
+    <header class="appbar">
+      <a class="brand" href="./"
+        >Client Desk<span style="color: var(--accent)">.</span></a
+      >
+      <div class="actions">
+        <a class="button" href="../#work">← All projects</a
+        ><button id="theme" aria-label="Toggle color theme">◐</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <div class="titlebar">
+        <div>
+          <span class="badge">Ahmed Studio / Interactive demo</span>
+          <h1>A little structure. Better relationships.</h1>
+        </div>
+        <span class="muted">Local-first · No account required</span>
+      </div>
+      <div class="notice">
+        Fictional local CRM demo. Nothing is sent to contacts. Avoid storing
+        sensitive customer data.
+      </div>
+      <div id="stats" class="grid cols3"></div>
+      <div class="grid cols2" style="margin-top: 25px">
+        <section class="panel">
+          <div class="row">
+            <h2>Your pipeline</h2>
+            <input
+              id="search"
+              aria-label="Search contacts"
+              placeholder="Search contacts"
+            />
+          </div>
+          <div id="contacts"></div>
+        </section>
+        <aside class="panel">
+          <h2>Add a contact</h2>
+          <form id="add" class="stack">
+            <label>Name<input id="name" required maxlength="80" /></label
+            ><label>Company<input id="company" maxlength="80" /></label
+            ><label>Email<input id="email" type="email" /></label
+            ><label
+              >Deal value (USD)<input
+                id="value"
+                type="number"
+                min="0"
+                max="100000000"
+                step=".01"
+                value="0" /></label
+            ><label>Notes<textarea id="notes"></textarea></label
+            ><button class="primary">Save contact</button>
+          </form>
+          <button id="export" style="margin-top: 20px">Export contacts</button>
+        </aside>
+      </div>
+    </main>
+    <script src="../studio.js?v=3"></script>
+    <script src="app.js?v=3"></script>
+  </body>
+</html>
