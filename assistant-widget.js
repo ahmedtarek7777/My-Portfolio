@@ -39,7 +39,7 @@
     if (!win.querySelector("iframe")) {
       const f = document.createElement("iframe");
       f.title = T("مساعد المعرض", "Portfolio assistant");
-      f.src = "site-assistant/?embed=1&v=11";
+      f.src = "site-assistant/?embed=1&v=12";
       win.append(f);
     }
   };

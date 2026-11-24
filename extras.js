@@ -514,7 +514,7 @@ async function assistant() {
       b = document.createElement("strong"),
       p = document.createElement("p");
     b.textContent = label;
-    p.textContent = text;
+    p.textContent = String(text).replace(/\*\*/g, "");
     a.append(b, p);
     if (label === T("إنت", "You")) a.className = "me";
     for (let d of links) {
