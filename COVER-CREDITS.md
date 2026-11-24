@@ -400,3 +400,69 @@ Same photograph as `client-desk` above.
 [3] A person holding a cup of coffee in front of a laptop - Free Photo on Unsplash — unsplash.com (2018-11-17)
 
 https://unsplash.com/photos/a-person-holding-a-cup-of-coffee-in-front-of-a-laptop-C_L61Njf3do
+
+
+# Covers added Nov 24, 2026 (via Openverse; CC0 / Public Domain / CC BY)
+
+Themed photographs, cropped to 1200x760. Not screenshots; no affiliation implied.
+
+- reaction-diffusion: Artomyces turgidus. Grows well rotted by None (CC0 1.0) https://www.rawpixel.com/image/4024044/photo-image-ocean-plant-nature
+- life-engine: Green 3d cubes, abstract wallpaper by None (CC0 1.0) https://www.rawpixel.com/image/8809265/photo-image-art-green-public-domain
+- raycaster-3d: Empty hallway in a building by Markus Spiske (CC0 1.0) https://www.rawpixel.com/image/431975/free-photo-image-hallway-corridor-building
+- neon-blocks: City neon light night bar by None (CC0 1.0) https://www.rawpixel.com/image/11189600/city-neon-light-night-bar
+- merge-2048: Colorful blocks toys by None (CC0 1.0) https://www.rawpixel.com/image/8812222/colorful-blocks-toys
+- sokoban-vault: indoor Japanese market is piles by None (CC0 1.0) https://www.rawpixel.com/image/5975001/photo-image-public-domain-nature-person
+- wave-ripples: Water droplet hitting water surface by None (CC0 1.0) https://www.rawpixel.com/image/3338177/free-photo-image-cc0-creative-commons
+- planet-3d: Imperial Valley, May 1972. Photographer: by U.S. National Archives (CC0 1.0) https://www.rawpixel.com/image/8799826/photo-image-moon-space-planet
+- regex-lab: Free computer code screen image by None (CC0 1.0) https://www.rawpixel.com/image/5916657/image-public-domain-computer-free
+- json-studio: Colorful software web code computer by None (CC0 1.0) https://www.rawpixel.com/image/3289770/free-photo-image-wallpaper-programmer-java-technology-cc0
+- markdown-studio: Laptop Desk Light Lamp by None (CC0 1.0) https://www.rawpixel.com/image/5966240/laptop-desk-light-lamp
+- http-client: Free network image by None (CC0 1.0) https://www.rawpixel.com/image/5924888/photo-image-public-domain-technology-free
+- mind-map: Free sticky notes office board by None (CC0 1.0) https://www.rawpixel.com/image/5925751/photo-image-sticky-note-public-domain-post
+- css-grid-builder: Blue aluminum wall. View by None (CC0 1.0) https://www.rawpixel.com/image/8809270/photo-image-grid-art-abstract
+- image-compressor: Camera lens, photography equipment by None (CC0 1.0) https://www.rawpixel.com/image/6035619/photo-image-public-domain-technology-camera
+- timezone-planner: Royal New Zealand Air Force by U.S. Forest Service (source) (CC0 1.0) https://www.rawpixel.com/image/8729542/photo-image-airplane-public-domain-sea
+- meeting-minutes-ai: Business office desk by None (CC0 1.0) https://www.rawpixel.com/image/6017950/photo-image-phone-public-domain-wood
+- debate-arena: On May 22, 2013, newly by U.S. Department of Energy (CC0 1.0) https://www.rawpixel.com/image/3322355/free-photo-image-microphone-public-speaking-speak
+- sql-from-english: Computer Server by None (CC0 1.0) https://www.rawpixel.com/image/5969555/computer-server
+- legal-simplifier: Vanity Fair: Policemen; 'Chief Magistrate' by None (CC0 1.0) https://www.rawpixel.com/image/9700435/image-person-art-vintage
+- product-copy-ai: Handlebar bike by None (CC0 1.0) https://www.rawpixel.com/image/3283284/free-photo-image-sport-bicycle-black-minimal
+- iss-tracker: ISS015-E-25049 (3 Sept. 2007) --- by None (CC0 1.0) https://www.rawpixel.com/image/8718556/photo-image-cloud-space-public-domain
+- air-quality: Shanghai smog by None (CC0 1.0) https://www.rawpixel.com/image/3343091/free-photo-image-city-environment-background
+- chart-studio: Population world divided according states by None (CC0 1.0) https://www.rawpixel.com/image/8905751/image-face-vintage-public-domain
+- gdp-bubbles: Free world map poster hanging by None (CC0 1.0) https://www.rawpixel.com/image/5926203/photo-image-background-wallpaper-public-domain
+- solar-orrery: Hemelkaart met de stelsels van by rijksmuseum (CC0 1.0) https://www.rawpixel.com/image/13739732/image-paper-art-pattern
+- egypt-routes: Ramleh Tel-Aviv. Junction Rehovoth road by libraryofcongress (CC0 1.0) https://www.rawpixel.com/image/6833464/photo-image-sky-art-vintage
+- synth-keys: Free digital mixer image by None (CC0 1.0) https://www.rawpixel.com/image/5922209/photo-image-background-public-domain-technology
+- piano-roll: Free piano image by None (CC0 1.0) https://www.rawpixel.com/image/5925461/photo-image-public-domain-free-music
+- generative-flow: Free abstract colorful painting image by None (CC0 1.0) https://www.rawpixel.com/image/5904404/photo-image-background-texture-public-domain
+- palette-from-image: Free paint samples image by None (CC0 1.0) https://www.rawpixel.com/image/5924630/photo-image-paper-public-domain-free
+- ascii-camera: Free matrix background by None (CC0 1.0) https://www.rawpixel.com/image/5901986/free-matrix-background-public-domain-cc0-photo
+- photo-filters: Photographer camera by None (CC0 1.0) https://www.rawpixel.com/image/6035414/photo-image-public-domain-person-camera
+- pos-cashier: Busy coffee shop & cafe by None (CC0 1.0) https://www.rawpixel.com/image/6113061/busy-coffee-shop-cafe-unknown-date-location
+- inventory-pro: C & P Tel. Co by libraryofcongress (CC0 1.0) https://www.rawpixel.com/image/7002893/tel-co
+- subscription-tracker: Hand swiping iPhone screen, location by None (CC0 1.0) https://www.rawpixel.com/image/6113725/photo-image-iphone-phone-public-domain
+- cosmic-orbits: Orion Nebula, captured Hubble Space by None (CC0 1.0) https://www.rawpixel.com/image/8717952/orion-nebula-captured-hubble-space-telescope
+- boids-flock: Onychognathus albirostris (White Billed Starling) by None (CC0 1.0) https://www.rawpixel.com/image/9199382/image-watercolors-vintage-public-domain
+- space-shooter: Space Rocket Launch by None (CC0 1.0) https://www.rawpixel.com/image/5968956/space-rocket-launch
+- verlet-cloth: Design Blue Curtains Gold Fringes by themet (CC0 1.0) https://www.rawpixel.com/image/9184090/image-texture-art-watercolor
+- gravity-golf: Close white golf ball green by None (CC0 1.0) https://www.rawpixel.com/image/5918220/image-public-domain-free-sport
+- nonogram-lab: Free two puzzle pieces image by None (CC0 1.0) https://www.rawpixel.com/image/5912856/image-public-domain-hands-free
+- sql-playground: Fans wires back computer server by None (CC0 1.0) https://www.rawpixel.com/image/3287862/free-photo-image-server-architecture-building
+- diagram-maker: Free man writing whiteboard image by None (CC0 1.0) https://www.rawpixel.com/image/5906613/photo-image-public-domain-person-free
+- spreadsheet-lite: Meteorology: chart air pressure temperature by None (CC0 1.0) https://www.rawpixel.com/image/13983410/image-background-paper-pattern
+- algo-visualizer: Free chart blue screen photo by None (CC0 1.0) https://www.rawpixel.com/image/5927200/photo-image-public-domain-blue-free
+- qr-studio: Instagram mobile app LG smartphone by None (CC0 1.0) https://www.rawpixel.com/image/6113534/photo-image-instagram-phone-public-domain
+- tree-structures-viz: Tree roots Estavayer-le-Lac, Switzerland by None (CC0 1.0) https://www.rawpixel.com/image/3286707/free-photo-image-wood-texture-lines-root
+- pitch-deck-ai: Ukraine cannot be compared Afghanistan by None (CC0 1.0) https://www.rawpixel.com/image/6918309/photo-image-public-domain-blue-person
+- rpg-master: fantasy landscape ancient ruins figures by None (CC0 1.0) https://www.rawpixel.com/image/8921221/image-art-vintage-public-domain
+- email-tone-ai: Free woman's hands typing laptop by None (CC0 1.0) https://www.rawpixel.com/image/5921173/photo-image-background-public-domain-hands
+- quake-map: Cracked earth in Pinto Basin by National Park Service (CC0 1.0) https://www.rawpixel.com/image/8729871/cracked-earth-pinto-basin
+- fx-rates: Coin Rose Noble Edward IV by themet (CC0 1.0) https://www.rawpixel.com/image/9087538/coin-with-rose-noble-and-edward
+- sprite-animator: New video game controller exposed by None (CC0 1.0) https://www.rawpixel.com/image/3298255/free-photo-image-playstation-game-controller-gaming-control
+- bezier-lab: Hypnotic spiral background by None (CC0 1.0) https://www.rawpixel.com/image/5922104/photo-image-background-public-domain-shape
+- meme-maker: laughing face (left) face expressing by None (CC0 1.0) https://www.rawpixel.com/image/13966981/image-cartoon-face-person
+- spectrogram-lab: Free Microphones Studio Recording photo by None (CC0 1.0) https://www.rawpixel.com/image/5926178/photo-image-public-domain-microphones-free
+- checkout-flow: Credit card, Mastercard VISA. Location by None (CC0 1.0) https://www.rawpixel.com/image/6113434/photo-image-public-domain-logo-money
+- pricing-builder: Rugs sale shop by None (CC0 1.0) https://www.rawpixel.com/image/6042297/photo-image-paper-public-domain-free
+- invoice-maker: Free calculator working desk image by None (CC0 1.0) https://www.rawpixel.com/image/5912338/image-background-public-domain-note

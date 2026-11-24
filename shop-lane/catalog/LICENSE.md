@@ -1,1 +1,0 @@
-Database portions from Open Food Facts, Open Beauty Facts and Open Products Facts and contributors are ODbL 1.0. Individual contents DbCL 1.0. Their images CC BY-SA 3.0. Wikidata CC0. Commons images per-file. Fresh manufacturer records/images retain their owners rights. See SOURCES.md and source links per record.

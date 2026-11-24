@@ -2,6 +2,8 @@
 
 Responsive static portfolio and interactive frontend demos. No build step. Serve with `python -m http.server` or GitHub Pages.
 
+The gallery contains 120 interactive projects (60 complex ones kept, 60 new advanced ones added; the earlier basic demos were replaced).
+
 ## Release 1
 
 - New responsive portfolio with project filtering, search, persistent theme/accent/layout/motion settings.

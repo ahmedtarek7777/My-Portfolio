@@ -8,20 +8,52 @@
   "#e8d5a8"
  ],
  [
-  "shop-lane",
-  "Shop Lane",
-  "Commerce",
-  "50,000 sourced product records across supermarket, technology and home, with demo EGP prices.",
-  "◈",
-  "#82c8bd"
+  "raycaster-3d",
+  "Raycaster 3D Maze",
+  "Games",
+  "A from-scratch pseudo-3D engine on Canvas.",
+  "❖",
+  "#e29a6b"
  ],
  [
-  "paper-trade",
-  "NOVA Exchange",
-  "Finance",
-  "Paper trading, portfolio analytics and a simulated market.",
-  "↗",
-  "#a98af2"
+  "planet-3d",
+  "3D Planet Generator",
+  "Games",
+  "Procedural 3D planets with terrain in Three.js.",
+  "◈",
+  "#5aa0ff"
+ ],
+ [
+  "sql-playground",
+  "SQL Playground",
+  "Tools",
+  "A SQL engine written in JS: JOIN, GROUP BY and more.",
+  "❖",
+  "#7bb6ff"
+ ],
+ [
+  "spreadsheet-lite",
+  "Formula Spreadsheet",
+  "Tools",
+  "A spreadsheet with SUM, IF and cell references.",
+  "◆",
+  "#2dd4bf"
+ ],
+ [
+  "gdp-bubbles",
+  "Gapminder Bubbles",
+  "Maps & Data",
+  "Income vs life expectancy for 200 countries over time.",
+  "✹",
+  "#ffb86b"
+ ],
+ [
+  "synth-keys",
+  "Synth Keyboard",
+  "Creative",
+  "A synth with envelope, filter, reverb and a live scope.",
+  "◆",
+  "#a66bf2"
  ],
  [
   "tower-defense",
@@ -80,14 +112,6 @@
   "#ffb84d"
  ],
  [
-  "site-assistant",
-  "Portfolio Assistant",
-  "Tools",
-  "An AI-powered assistant that answers questions about Ahmed's projects and the information published on the site.",
-  "✦",
-  "#99cfc4"
- ],
- [
   "physics-puzzle",
   "Physics Puzzle",
   "Games",
@@ -110,6 +134,86 @@
   "Candlesticks, live prices and price alerts.",
   "✦",
   "#ffbf5e"
+ ],
+ [
+  "cosmic-orbits",
+  "Orbit Gravity Sandbox",
+  "Games",
+  "N-body gravity with collisions, trails and drag-to-launch bodies.",
+  "✦",
+  "#f2c36b"
+ ],
+ [
+  "reaction-diffusion",
+  "Reaction-Diffusion Lab",
+  "Games",
+  "Gray-Scott equations growing living organic patterns.",
+  "◆",
+  "#a66bf2"
+ ],
+ [
+  "space-shooter",
+  "Space Shooter",
+  "Games",
+  "Waves, bosses, weapon upgrades and lives.",
+  "✹",
+  "#6b8cf2"
+ ],
+ [
+  "verlet-cloth",
+  "Verlet Cloth Physics",
+  "Games",
+  "Verlet cloth with wind, gravity and cutting.",
+  "◆",
+  "#7c5cff"
+ ],
+ [
+  "diagram-maker",
+  "Diagram Maker",
+  "Tools",
+  "Flowcharts with drag, connect and SVG/PNG export.",
+  "◈",
+  "#38bdf8"
+ ],
+ [
+  "rpg-master",
+  "AI RPG Game Master",
+  "AI",
+  "A text RPG with health, inventory and choices.",
+  "◈",
+  "#f59e0b"
+ ],
+ [
+  "quake-map",
+  "Live Earthquake Map",
+  "Maps & Data",
+  "Live USGS data on an interactive map.",
+  "✦",
+  "#ff6b6b"
+ ],
+ [
+  "solar-orrery",
+  "Solar System Orrery",
+  "Maps & Data",
+  "Planets moving at their real orbital periods.",
+  "✦",
+  "#ffc83a"
+ ],
+ [
+  "piano-roll",
+  "Piano Roll Composer",
+  "Creative",
+  "Write a melody on a grid and play it back.",
+  "✺",
+  "#7bb6ff"
+ ],
+ [
+  "spectrogram-lab",
+  "Audio Spectrogram Lab",
+  "Creative",
+  "A live spectrogram from your microphone.",
+  "❖",
+  "#a66bf2"
  ],
  [
   "ui-from-text",
@@ -142,14 +246,6 @@
   "Video lists, comments, likes and a watch page.",
   "✦",
   "#ff8080"
- ],
- [
-  "weather-now",
-  "Weather Now",
-  "Tools",
-  "City search, live conditions and a five-day forecast.",
-  "☀",
-  "#85b5ec"
  ],
  [
   "study-ai",
@@ -192,20 +288,132 @@
   "#e6e1c5"
  ],
  [
-  "code-studio",
-  "Code Studio",
-  "Tools",
-  "A multi-file editor with 20 languages and an isolated web preview.",
-  "✦",
-  "#99cfc4"
- ],
- [
   "kanban-board",
   "Kanban Task Manager",
   "Tools",
   "Boards, columns and drag and drop tasks with labels.",
   "✦",
   "#8ab4ff"
+ ],
+ [
+  "boids-flock",
+  "Boids Flock Simulation",
+  "Games",
+  "Flocking simulation with a predator and live rule controls.",
+  "◈",
+  "#6bc8f2"
+ ],
+ [
+  "life-engine",
+  "Game of Life Engine",
+  "Games",
+  "Conway-style engine with editable rules and presets.",
+  "✺",
+  "#79e6bd"
+ ],
+ [
+  "neon-blocks",
+  "Neon Blocks",
+  "Games",
+  "Full Tetris with hold, ghost piece and levels.",
+  "✦",
+  "#ff6bd5"
+ ],
+ [
+  "merge-2048",
+  "Smart 2048",
+  "Games",
+  "2048 with undo, Expectimax hints and auto-play.",
+  "◈",
+  "#f2b179"
+ ],
+ [
+  "regex-lab",
+  "Regex Lab",
+  "Tools",
+  "Regex tester with highlighting, explanation and replace.",
+  "◆",
+  "#c2a6ff"
+ ],
+ [
+  "markdown-studio",
+  "Markdown Studio",
+  "Tools",
+  "Markdown editor with a custom parser, live preview and TOC.",
+  "✹",
+  "#ffb86b"
+ ],
+ [
+  "http-client",
+  "HTTP Client",
+  "Tools",
+  "API testing tool with headers, body and request history.",
+  "✦",
+  "#ff8fa3"
+ ],
+ [
+  "algo-visualizer",
+  "Algorithm Visualizer",
+  "Tools",
+  "Seven sorting algorithms animated, with a benchmark.",
+  "❖",
+  "#a3e635"
+ ],
+ [
+  "pitch-deck-ai",
+  "AI Pitch Deck",
+  "AI",
+  "A 9-slide pitch for your idea with a viewer and export.",
+  "❖",
+  "#c2a6ff"
+ ],
+ [
+  "debate-arena",
+  "AI Debate Arena",
+  "AI",
+  "Two AIs debate a topic and a judge picks the winner.",
+  "✦",
+  "#ff8fa3"
+ ],
+ [
+  "iss-tracker",
+  "ISS Live Tracker",
+  "Maps & Data",
+  "The space station's live position and ground track.",
+  "◈",
+  "#79e6bd"
+ ],
+ [
+  "egypt-routes",
+  "Egypt Route Planner",
+  "Maps & Data",
+  "Shortest route between cities with Dijkstra.",
+  "◈",
+  "#e2b36b"
+ ],
+ [
+  "generative-flow",
+  "Generative Flow Art",
+  "Creative",
+  "Flow-field artworks with seeds, palettes and export.",
+  "❖",
+  "#f26b9a"
+ ],
+ [
+  "sprite-animator",
+  "Pixel Sprite Animator",
+  "Creative",
+  "Draw pixel frames and watch them animate.",
+  "✹",
+  "#79e6bd"
+ ],
+ [
+  "pos-cashier",
+  "POS Cashier",
+  "Commerce",
+  "Cart, discount, VAT, receipt printing and daily sales.",
+  "✦",
+  "#79e6bd"
  ],
  [
   "tshirt-designer",
@@ -256,14 +464,6 @@
   "#74d7c1"
  ],
  [
-  "image-studio",
-  "Pixel Studio",
-  "Creative",
-  "Private image editing with filters, rotation, resizing and PNG export.",
-  "▣",
-  "#b1c7d9"
- ],
- [
   "trip-planner",
   "Smart Trip Planner",
   "AI",
@@ -280,14 +480,6 @@
   "#a78bfa"
  ],
  [
-  "arcade",
-  "PLAY / LAB",
-  "Games",
-  "Five games, personal bests and instant play.",
-  "✦",
-  "#e6bd74"
- ],
- [
   "sentiment-lab",
   "Sentiment Analyzer",
   "AI",
@@ -302,6 +494,142 @@
   "Episodes, playback speeds, a waveform bar and playlists.",
   "✦",
   "#ff9ac7"
+ ],
+ [
+  "gravity-golf",
+  "Physics Golf",
+  "Games",
+  "Six levels with collisions and drag-to-aim shots.",
+  "✺",
+  "#4fa86b"
+ ],
+ [
+  "wave-ripples",
+  "Ripple Tank",
+  "Games",
+  "Wave simulation with two-source interference.",
+  "✦",
+  "#3b82f6"
+ ],
+ [
+  "json-studio",
+  "JSON Studio",
+  "Tools",
+  "Format, validate, tree view and path query for JSON.",
+  "✺",
+  "#79e6bd"
+ ],
+ [
+  "mind-map",
+  "Mind Map",
+  "Tools",
+  "Mind maps with colored branches, shortcuts and export.",
+  "✺",
+  "#f2e27a"
+ ],
+ [
+  "image-compressor",
+  "Image Compressor",
+  "Tools",
+  "Compress and convert images with a before/after slider.",
+  "✦",
+  "#ec4899"
+ ],
+ [
+  "tree-structures-viz",
+  "Data Structure Trees",
+  "Tools",
+  "Animated BST and heap with search and traversals.",
+  "◆",
+  "#79e6bd"
+ ],
+ [
+  "meeting-minutes-ai",
+  "AI Meeting Minutes",
+  "AI",
+  "Turns raw notes into decisions, actions and risks.",
+  "✹",
+  "#79e6bd"
+ ],
+ [
+  "sql-from-english",
+  "English to SQL",
+  "AI",
+  "Ask a question and get the query with an explanation.",
+  "✺",
+  "#38bdf8"
+ ],
+ [
+  "legal-simplifier",
+  "Legal Simplifier",
+  "AI",
+  "Explains legal clauses and flags the risky parts.",
+  "❖",
+  "#a3a3b8"
+ ],
+ [
+  "air-quality",
+  "Air Quality Monitor",
+  "Maps & Data",
+  "Air quality index and pollutants for any city.",
+  "◆",
+  "#9be46b"
+ ],
+ [
+  "fx-rates",
+  "Currency Rates",
+  "Maps & Data",
+  "Live currency converter with a 90-day chart.",
+  "✺",
+  "#f2e27a"
+ ],
+ [
+  "chart-studio",
+  "Chart Studio",
+  "Maps & Data",
+  "Paste CSV, pick a chart type and download it.",
+  "❖",
+  "#c2a6ff"
+ ],
+ [
+  "bezier-lab",
+  "Bezier Easing Lab",
+  "Creative",
+  "Tune easing curves and preview them on an element.",
+  "✦",
+  "#c2a6ff"
+ ],
+ [
+  "palette-from-image",
+  "Palette From Image",
+  "Creative",
+  "k-means extracts the dominant colors of a photo.",
+  "◈",
+  "#ff8a5b"
+ ],
+ [
+  "ascii-camera",
+  "ASCII Camera",
+  "Creative",
+  "Turn your camera or a photo into text art.",
+  "✺",
+  "#6bf28a"
+ ],
+ [
+  "inventory-pro",
+  "Inventory Manager",
+  "Commerce",
+  "Stock with low alerts, chart, sorting and CSV.",
+  "◈",
+  "#7bb6ff"
+ ],
+ [
+  "checkout-flow",
+  "Checkout Flow",
+  "Commerce",
+  "Multi-step checkout with Luhn validation and auto-format.",
+  "◆",
+  "#c2a6ff"
  ],
  [
   "cv-builder",
@@ -344,14 +672,6 @@
   "#7fe3b0"
  ],
  [
-  "translator",
-  "Translator",
-  "Tools",
-  "Translate real text, listen to the result, and copy it.",
-  "✦",
-  "#99cfc4"
- ],
- [
   "support-bot",
   "Support Chatbot",
   "AI",
@@ -366,22 +686,6 @@
   "Two players on one keyboard in a fast tank duel.",
   "✦",
   "#ff9a76"
- ],
- [
-  "pathfinder",
-  "Pathfinder",
-  "Learning",
-  "Interactive BFS and Dijkstra pathfinding with walls, weights and animation.",
-  "⌘",
-  "#a6c4ad"
- ],
- [
-  "data-lens",
-  "Data Lens",
-  "Business",
-  "CSV import, numeric summaries, sortable tables, category charts and export.",
-  "▥",
-  "#94b9c3"
  ],
  [
   "dialect-translator",
@@ -406,6 +710,94 @@
   "Standings, scorers and results in tables and charts.",
   "✦",
   "#85e08f"
+ ],
+ [
+  "sokoban-vault",
+  "Crate Vault Puzzle",
+  "Games",
+  "Sokoban puzzle with levels and undo.",
+  "❖",
+  "#c9a87a"
+ ],
+ [
+  "nonogram-lab",
+  "Nonogram Lab",
+  "Games",
+  "Picture-by-numbers puzzles of different sizes.",
+  "✹",
+  "#9aa8c9"
+ ],
+ [
+  "css-grid-builder",
+  "CSS Grid Builder",
+  "Tools",
+  "Design a CSS grid visually and copy the code.",
+  "✹",
+  "#7c5cff"
+ ],
+ [
+  "qr-studio",
+  "QR Studio",
+  "Tools",
+  "QR codes with colors, styles and PNG/SVG export.",
+  "◈",
+  "#171a22"
+ ],
+ [
+  "timezone-planner",
+  "Timezone Planner",
+  "Tools",
+  "Find shared meeting hours across time zones.",
+  "✺",
+  "#f59e0b"
+ ],
+ [
+  "email-tone-ai",
+  "Email Tone Rewriter",
+  "AI",
+  "Three versions of your email in the tone you pick.",
+  "◆",
+  "#7bb6ff"
+ ],
+ [
+  "product-copy-ai",
+  "Product Copy Writer",
+  "AI",
+  "Title, bullets, description and hashtags for your product.",
+  "✹",
+  "#ec4899"
+ ],
+ [
+  "meme-maker",
+  "Meme Maker",
+  "Creative",
+  "Put text on any image and download it.",
+  "◆",
+  "#ffd24d"
+ ],
+ [
+  "photo-filters",
+  "Photo Filters",
+  "Creative",
+  "Live filters and color adjustments, then download.",
+  "✹",
+  "#f29a6b"
+ ],
+ [
+  "pricing-builder",
+  "Pricing Page Builder",
+  "Commerce",
+  "Edit tiers, currency and discount, then export.",
+  "✺",
+  "#7c5cff"
+ ],
+ [
+  "invoice-maker",
+  "Invoice Maker",
+  "Commerce",
+  "An invoice with tax, ready to print as PDF.",
+  "❖",
+  "#2dd4bf"
  ],
  [
   "poll-site",
@@ -438,22 +830,6 @@
   "Moving particles and gradients you can save as wallpaper.",
   "✦",
   "#6cb6ff"
- ],
- [
-  "flow-board",
-  "Flow Board",
-  "Productivity",
-  "A project board with priorities, search, movable cards and JSON backup.",
-  "◈",
-  "#aac8dd"
- ],
- [
-  "audio-visualizer",
-  "Audio Visualizer",
-  "Creative",
-  "Open an audio file from your device and watch its frequencies move.",
-  "✦",
-  "#99cfc4"
  ],
  [
   "content-ideas",
@@ -504,20 +880,12 @@
   "#79d0ff"
  ],
  [
-  "calendar-studio",
-  "Daylight Calendar",
-  "Productivity",
-  "Monthly planning with event editing, reminders on the page and ICS export.",
-  "▦",
-  "#e0b38c"
- ],
- [
-  "sound-lab",
-  "Sound Lab",
-  "Creative",
-  "A browser synthesizer and step sequencer with tempo, waveforms and pattern storage.",
-  "♫",
-  "#b4a2d3"
+  "subscription-tracker",
+  "Subscription Tracker",
+  "Commerce",
+  "Your subscriptions, renewals and total spend.",
+  "✹",
+  "#f59e0b"
  ],
  [
   "brand-namer",
@@ -536,14 +904,6 @@
   "#e6c27a"
  ],
  [
-  "invoice-studio",
-  "Invoice Studio",
-  "Business",
-  "Editable line items, tax, discounts, saved drafts and print-ready invoices.",
-  "▤",
-  "#c8bb91"
- ],
- [
   "css-builder",
   "Visual CSS Builder",
   "Tools",
@@ -560,60 +920,12 @@
   "#a9c8ff"
  ],
  [
-  "fractal-lab",
-  "Fractal Lab",
-  "Creative",
-  "Zoom into the Mandelbrot set and explore its details.",
-  "✦",
-  "#99cfc4"
- ],
- [
   "daily-word",
   "Daily Word",
   "Games",
   "One Arabic word a day, six tries to guess it.",
   "✦",
   "#7bd88f"
- ],
- [
-  "client-desk",
-  "Client Desk",
-  "Business",
-  "A local CRM with contacts, deal stages, notes, search and pipeline value.",
-  "◎",
-  "#c8aad8"
- ],
- [
-  "stock-room",
-  "Stock Room",
-  "Business",
-  "Inventory with real product imagery, stock movements, low-stock flags and search.",
-  "▧",
-  "#a6c2a2"
- ],
- [
-  "route-book",
-  "Route Book",
-  "Lifestyle",
-  "A multi-day itinerary builder with budgets, packing and trip exports.",
-  "⌁",
-  "#9ac7c2"
- ],
- [
-  "svg-studio",
-  "Shape Studio",
-  "Creative",
-  "Create vector shapes and download them as an SVG.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "drum-machine",
-  "Drum Machine",
-  "Creative",
-  "Arrange drum sounds across 16 steps and save your rhythm.",
-  "✦",
-  "#99cfc4"
  ],
  [
   "text-diff",
@@ -624,212 +936,12 @@
   "#ffa6a6"
  ],
  [
-  "particle-lab",
-  "Particle Playground",
-  "Creative",
-  "Adjust the motion and attraction to make the particles dance.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "quiz-academy",
-  "Quiz Academy",
-  "Learning",
-  "Topic quizzes with explanations, review mode and progress history.",
-  "◇",
-  "#a8bddd"
- ],
- [
-  "drawing-board",
-  "Drawing Board",
-  "Creative",
-  "Draw with touch or a mouse, undo a stroke, and download your artwork.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "sudoku",
-  "Mini Sudoku",
-  "Games",
-  "Fill the grid with 1 through 4 without repeating a number in any row, column, or box.",
-  "✦",
-  "#99cfc4"
- ],
- [
   "habit-heatmap",
   "Habit Heatmap",
   "Tools",
   "A GitHub style grid with streaks and stats.",
   "✦",
   "#6fdc8c"
- ],
- [
-  "connect-four",
-  "Connect Four",
-  "Games",
-  "Play with a friend on the same device. The first player to connect four pieces wins.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "taskly",
-  "Taskly",
-  "Productivity",
-  "Plan your day with drag-and-drop tasks and dark mode.",
-  "✓",
-  "#e49db1"
- ],
- [
-  "budget-lab",
-  "Budget Lab",
-  "Finance",
-  "Income, expenses, category budgets, charts and transaction exports.",
-  "◒",
-  "#95c9ac"
- ],
- [
-  "ink-notes",
-  "Ink Notes",
-  "Productivity",
-  "A searchable notebook with tags, safe Markdown preview and export.",
-  "✎",
-  "#c6a1c8"
- ],
- [
-  "breakout",
-  "Breakout",
-  "Games",
-  "Move the paddle and break every brick.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "maze-run",
-  "Maze Run",
-  "Games",
-  "Find your way to the exit without crossing the walls.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "meal-studio",
-  "Meal Studio",
-  "Lifestyle",
-  "Recipe search, serving scaling, a weekly meal plan and shopping list.",
-  "◒",
-  "#dcc78a"
- ],
- [
-  "mines",
-  "Minesweeper",
-  "Games",
-  "Use the numbers to reveal safe squares and avoid the mines.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "workout-log",
-  "Rep Studio",
-  "Lifestyle",
-  "Workout sessions, exercise sets, training volume and personal records.",
-  "↟",
-  "#d6a094"
- ],
- [
-  "sky-hop",
-  "Sky Hop",
-  "Games",
-  "Fly between the columns and keep your height under control.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "cafe-landing",
-  "Ember & Oak",
-  "Experiences",
-  "An atmospheric cafe concept and local demo booking.",
-  "♨",
-  "#c49a73"
- ],
- [
-  "habit-garden",
-  "Habit Garden",
-  "Lifestyle",
-  "Habit tracking with weekly history, streaks and completion analytics.",
-  "❀",
-  "#b8ce8c"
- ],
- [
-  "split-bills",
-  "Fair Share",
-  "Finance",
-  "Group expenses, equal splits, net balances and simplified settlements.",
-  "⇄",
-  "#98c2c9"
- ],
- [
-  "type-racer",
-  "Type Racer",
-  "Learning",
-  "Timed typing practice with live accuracy, WPM, progress and personal history.",
-  "⌨",
-  "#b8abd5"
- ],
- [
-  "pixel-art",
-  "Pixel Art",
-  "Creative",
-  "Color small squares to create a pixel-art drawing.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "focus-room",
-  "Focus Room",
-  "Productivity",
-  "A configurable focus timer with breaks, task queue and session log.",
-  "◷",
-  "#9eaad2"
- ],
- [
-  "sliding-puzzle",
-  "Sliding Number Puzzle",
-  "Games",
-  "Slide the tiles until the numbers are in order.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "word-guess",
-  "Word Guess",
-  "Games",
-  "Guess the hidden word before you run out of tries.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "pong",
-  "Pong",
-  "Games",
-  "Challenge the computer with a paddle and ball.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "noise-maker",
-  "Noise Maker",
-  "Creative",
-  "Mix white, pink, and brown noise for a focused listening session.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "mandala",
-  "Mandala Drawing",
-  "Creative",
-  "Draw with radial symmetry to create a mandala.",
-  "✦",
-  "#99cfc4"
  ],
  [
   "password-gen",
@@ -840,83 +952,11 @@
   "#7ee8c8"
  ],
  [
-  "snake",
-  "Snake",
-  "Games",
-  "Collect food with the arrow keys or movement buttons, and avoid the walls and your own tail.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "gradient-lab",
-  "Gradient Lab",
-  "Creative",
-  "Combine gradient colors and copy the CSS code.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "palette-lab",
-  "Color Palette Lab",
-  "Creative",
-  "Build a harmonious color palette and save your colors.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "simon",
-  "Simon Says",
-  "Games",
-  "Watch and listen to the sequence, then repeat it.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "math-duel",
-  "Math Duel",
-  "Games",
-  "Solve as many math problems as you can before time runs out.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "type-studio",
-  "Typography Studio",
-  "Creative",
-  "Try different fonts and spacing, then download your design.",
-  "✦",
-  "#99cfc4"
- ],
- [
   "unit-converter",
   "Universal Unit Converter",
   "Tools",
   "Length, weight, temperature and data with quick search.",
   "✦",
   "#9ec9ff"
- ],
- [
-  "lights-out",
-  "Lights Out",
-  "Games",
-  "Tap the squares to switch off the entire board.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "whack",
-  "Whack-a-Target",
-  "Games",
-  "Tap the target before it moves and rack up points.",
-  "✦",
-  "#99cfc4"
- ],
- [
-  "pattern-lab",
-  "Pattern Lab",
-  "Creative",
-  "Design a repeating pattern and download it as an image.",
-  "✦",
-  "#99cfc4"
  ]
 ]

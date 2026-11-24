@@ -14,9 +14,13 @@ function loadScript(src){return new Promise((ok,no)=>{const s=document.createEle
 function loadCSS(href){const l=document.createElement("link");l.rel="stylesheet";l.href=href;document.head.append(l)}
 async function ai(prompt,system=""){
   const body=JSON.stringify({system_instruction:{parts:[{text:system+" Reply in "+(AR?"Egyptian Arabic (colloquial) unless asked otherwise":"English")+"."}]},contents:[{role:"user",parts:[{text:prompt}]}]});
-  for(const m of ["gemini-3.8-flash","gemini-3.5-flash-lite","gemini-flash-lite-latest","gemini-3.5-flash"]){
-    try{const r=await fetch("https://portfolio-ai.ahmedtarek-portfolio.workers.dev/?model="+m,{method:"POST",headers:{"Content-Type":"application/json"},body,signal:AbortSignal.timeout(25000)});
-      if(!r.ok)continue;const d=await r.json();const x=(d.candidates?.[0]?.content?.parts||[]).map(p=>p.text||"").join("").trim();if(x)return x}catch{}}
+  const models=["gemini-3.5-flash-lite","gemini-flash-lite-latest","gemini-3.5-flash","gemini-3-flash-preview","gemini-3.8-flash","gemini-flash-latest"];
+  for(let round=0;round<3;round++){
+    for(const m of models){
+      try{const r=await fetch("https://portfolio-ai.ahmedtarek-portfolio.workers.dev/?model="+m,{method:"POST",headers:{"Content-Type":"application/json"},body,signal:AbortSignal.timeout(75000)});
+        if(!r.ok)continue;const d=await r.json();const x=(d.candidates?.[0]?.content?.parts||[]).map(p=>p.text||"").join("").trim();if(x)return x}catch{}}
+    await new Promise(r=>setTimeout(r,1500*(round+1)));
+  }
   throw new Error("ai");
 }
 function aiJSON(x){const m=x.match(/[\[{][\s\S]*[\]}]/);if(!m)throw new Error("json");return JSON.parse(m[0])}

@@ -1,0 +1,11 @@
+(()=>{const N=160,S=4;const[c,x]=canvas(N*S,N*S);c.style.cssText="max-width:100%;height:auto;background:#000;border-radius:14px;image-rendering:pixelated;touch-action:none";
+const P={coral:[.0545,.062],mitosis:[.0367,.0649],spots:[.035,.065],maze:[.029,.057],worms:[.078,.061],waves:[.014,.045]};
+const ctl=document.createElement("div");ctl.className="row";ctl.style.marginBottom="12px";ctl.innerHTML=Object.keys(P).map(k=>`<button data-p=${k}>${k}</button>`).join("")+`<button id=rs>${t("إعادة","Reset")}</button><label>${t("لون","Hue")} <input type=range id=hu min=0 max=360 value=200></label><span class=small>${t("ارسم بالماوس لإضافة مادة","Draw to add chemical")}</span>`;app.prepend(ctl);
+let A=new Float32Array(N*N).fill(1),Bc=new Float32Array(N*N),A2=new Float32Array(N*N),B2=new Float32Array(N*N),f=.0545,k=.062;
+function seed(){A.fill(1);Bc.fill(0);for(let i=0;i<8;i++){const cx=ri(20,N-20),cy=ri(20,N-20);for(let y=-4;y<5;y++)for(let z=-4;z<5;z++){Bc[(cy+y)*N+cx+z]=1}}}
+seed();$$("[data-p]").forEach(b=>b.onclick=()=>{[f,k]=P[b.dataset.p];seed()});$("#rs").onclick=seed;
+let dn=false;const put=e=>{const r=c.getBoundingClientRect(),px=Math.floor((e.clientX-r.left)/r.width*N),py=Math.floor((e.clientY-r.top)/r.height*N);for(let y=-3;y<=3;y++)for(let z=-3;z<=3;z++){const i=(py+y)*N+px+z;if(i>=0&&i<N*N)Bc[i]=1}};
+c.onpointerdown=e=>{dn=true;put(e)};c.onpointermove=e=>dn&&put(e);addEventListener("pointerup",()=>dn=false);
+const img=x.createImageData(N*S,N*S);
+loop(()=>{for(let it=0;it<8;it++){for(let y=0;y<N;y++){const yu=((y+N-1)%N)*N,yd=((y+1)%N)*N,yc=y*N;for(let z=0;z<N;z++){const l=(z+N-1)%N,r=(z+1)%N,i=yc+z,a=A[i],b=Bc[i];const la=A[yc+l]+A[yc+r]+A[yu+z]+A[yd+z]-4*a,lb=Bc[yc+l]+Bc[yc+r]+Bc[yu+z]+Bc[yd+z]-4*b,ab2=a*b*b;A2[i]=a+(.2*la-ab2+f*(1-a));B2[i]=b+(.1*lb+ab2-(k+f)*b)}}[A,A2]=[A2,A];[Bc,B2]=[B2,Bc]}
+const hue=+$("#hu").value;const d=img.data;for(let y=0;y<N;y++)for(let z=0;z<N;z++){const v=Math.min(1,Bc[y*N+z]*3.2);const hh=(hue+v*60)%360,s=.8,l=v*.6;const q=l<.5?l*(1+s):l+s-l*s,p=2*l-q;const hf=t=>{t=(t+1)%1;return t<1/6?p+(q-p)*6*t:t<.5?q:t<2/3?p+(q-p)*(2/3-t)*6:p};const R=hf(hh/360+1/3)*255,G=hf(hh/360)*255,Bl=hf(hh/360-1/3)*255;for(let sy=0;sy<S;sy++)for(let sx=0;sx<S;sx++){const o=((y*S+sy)*N*S+z*S+sx)*4;d[o]=R;d[o+1]=G;d[o+2]=Bl;d[o+3]=255}}x.putImageData(img,0,0)});})();
