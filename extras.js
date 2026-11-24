@@ -558,25 +558,31 @@ async function assistant() {
         siteInfo.slice(0, 9000);
       history.push({ role: "user", content: q });
       const payload = JSON.stringify({
-        model: "openai",
+        model: "openai-fast",
         messages: [{ role: "system", content: system }, ...history.slice(-12)],
       });
       let data = null;
-      for (const url of [
-        "https://gen.pollinations.ai/v1/chat/completions",
-        "https://text.pollinations.ai/openai",
-      ]) {
-        try {
-          const res = await fetch(url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: payload,
-          });
-          if (res.ok) {
-            data = await res.json();
-            break;
-          }
-        } catch (e) {}
+      for (let attempt = 0; attempt < 3 && !data; attempt++) {
+        const res = await fetch("https://text.pollinations.ai/openai", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: payload,
+        });
+        if (res.ok) {
+          data = await res.json();
+          break;
+        }
+        const body = await res.text();
+        const m = /(\d+)s/.exec(body.match(/Retry after[^.]*/i)?.[0] || "");
+        if (res.status !== 402 && res.status !== 429) break;
+        const secs = Math.min(60, m ? +m[1] + 1 : 20);
+        for (let i = secs; i > 0; i--) {
+          wait.children[1].textContent = T(
+            "الخدمة المجانية مشغولة، هجاوب بعد " + i + " ثانية…",
+            "Free AI service is busy, answering in " + i + "s…",
+          );
+          await new Promise((r) => setTimeout(r, 1000));
+        }
       }
       if (!data) throw new Error("no endpoint");
       const reply = (data.choices?.[0]?.message?.content || "").trim();
