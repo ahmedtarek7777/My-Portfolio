@@ -557,35 +557,37 @@ async function assistant() {
         "You are the smart AI assistant inside Ahmed Tarek's portfolio website (Ahmed is a frontend web developer from Egypt). You are a general-purpose, helpful chatbot: answer ANY question on any topic (general knowledge, coding, math, writing, advice, translation, chat), not only questions about the site. When the user asks about Ahmed or the site's projects, use the site information below and never invent personal details such as phone numbers, age or private data. Reply in the user's language; if they write Arabic, use natural Egyptian colloquial Arabic. Be concise and friendly. Site information:\n" +
         siteInfo.slice(0, 9000);
       history.push({ role: "user", content: q });
-      const payload = JSON.stringify({
-        model: "openai-fast",
-        messages: [{ role: "system", content: system }, ...history.slice(-12)],
+      const GEMINI_MODELS = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"];
+      const geminiBody = JSON.stringify({
+        system_instruction: { parts: [{ text: system }] },
+        contents: history.slice(-12).map((m) => ({
+          role: m.role === "assistant" ? "model" : "user",
+          parts: [{ text: m.content }],
+        })),
       });
-      let data = null;
-      for (let attempt = 0; attempt < 3 && !data; attempt++) {
-        const res = await fetch("https://text.pollinations.ai/openai", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: payload,
-        });
-        if (res.ok) {
-          data = await res.json();
-          break;
-        }
-        const body = await res.text();
-        const m = /(\d+)s/.exec(body.match(/Retry after[^.]*/i)?.[0] || "");
-        if (res.status !== 402 && res.status !== 429) break;
-        const secs = Math.min(60, m ? +m[1] + 1 : 20);
-        for (let i = secs; i > 0; i--) {
-          wait.children[1].textContent = T(
-            "الخدمة المجانية مشغولة، هجاوب بعد " + i + " ثانية…",
-            "Free AI service is busy, answering in " + i + "s…",
+      let reply = "";
+      for (const model of GEMINI_MODELS) {
+        try {
+          const res = await fetch(
+            "https://generativelanguage.googleapis.com/v1beta/models/" + model + ":generateContent",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "x-goog-api-key": "AIzaSyCGhWSloTazJEVedVofWI-2cWhArfRaiiI",
+              },
+              body: geminiBody,
+            },
           );
-          await new Promise((r) => setTimeout(r, 1000));
-        }
+          if (!res.ok) continue;
+          const data = await res.json();
+          reply = (data.candidates?.[0]?.content?.parts || [])
+            .map((p) => p.text || "")
+            .join("")
+            .trim();
+          if (reply) break;
+        } catch (e) {}
       }
-      if (!data) throw new Error("no endpoint");
-      const reply = (data.choices?.[0]?.message?.content || "").trim();
       if (!reply) throw new Error("empty");
       history.push({ role: "assistant", content: reply });
       wait.remove();
