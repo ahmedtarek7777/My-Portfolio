@@ -225,3 +225,10 @@ textarea {
 .embedded-assistant details{padding:0 16px 10px;border:0!important;opacity:.7}
 @keyframes ai-bounce{0%,60%,100%{transform:translateY(0);opacity:.45}30%{transform:translateY(-6px);opacity:1}}
 @keyframes ai-msg{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+html:has(.embedded-assistant),.embedded-assistant{height:100%;overflow:hidden}
+.embedded-assistant,.embedded-assistant *{box-sizing:border-box}
+.embedded-assistant main{height:100%;max-height:100vh;overflow:hidden}
+.embedded-assistant .chatlog article,.embedded-assistant .chatlog article p{color:var(--text,#f1f0f3)}
+.embedded-assistant .chatlog article.me,.embedded-assistant .chatlog article.me p{color:#18141f!important}
+.embedded-assistant .chatlog::-webkit-scrollbar{width:6px}.embedded-assistant .chatlog::-webkit-scrollbar-thumb{background:var(--line,#2c2d34);border-radius:6px}
