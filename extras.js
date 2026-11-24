@@ -559,7 +559,7 @@ async function assistant() {
         "You are the smart AI assistant inside Ahmed Tarek's portfolio website (Ahmed is a frontend web developer from Egypt). You are a general-purpose, helpful chatbot: answer ANY question on any topic (general knowledge, coding, math, writing, advice, translation, chat), not only questions about the site. When the user asks about Ahmed or the site's projects, use the site information below and never invent personal details such as phone numbers, age or private data. Reply in the user's language; if they write Arabic, use natural Egyptian colloquial Arabic. Be concise and friendly. Site information:\n" +
         siteInfo.slice(0, 9000);
       history.push({ role: "user", content: q });
-      const GEMINI_MODELS = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-3.5-flash-lite"];
+      const GEMINI_MODELS = ["gemini-3.8-flash", "gemini-3.5-flash-lite", "gemini-3.5-flash"];
       const geminiBody = JSON.stringify({
         system_instruction: { parts: [{ text: system }] },
         contents: history.slice(-12).map((m) => ({
@@ -578,6 +578,7 @@ async function assistant() {
                 "Content-Type": "application/json",
               },
               body: geminiBody,
+              signal: AbortSignal.timeout(20000),
             },
           );
           if (!res.ok) continue;
