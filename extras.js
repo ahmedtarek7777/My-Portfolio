@@ -516,6 +516,7 @@ async function assistant() {
     b.textContent = label;
     p.textContent = text;
     a.append(b, p);
+    if (label === T("إنت", "You")) a.className = "me";
     for (let d of links) {
       let link = document.createElement("a");
       link.href = d.url;
@@ -541,9 +542,10 @@ async function assistant() {
     $("#send").disabled = true;
     add(T("إنت", "You"), q);
     const wait = document.createElement("article");
+    wait.className = "typing";
     wait.innerHTML = "<strong></strong><p></p>";
     wait.children[0].textContent = T("المساعد", "Assistant");
-    wait.children[1].textContent = "…";
+    wait.children[1].innerHTML = "<i></i><i></i><i></i>";
     $("#chat").append(wait);
     $("#chat").scrollTop = $("#chat").scrollHeight;
     try {
@@ -826,7 +828,10 @@ async function assistant() {
     );
     advanced.append(summary, modelNote, modelTools);
     const mode = $("#status");
-    panel.replaceChildren(chat, form, suggestions, advanced, mode);
+    suggestions.className = 'chips';
+    panel.replaceChildren(chat, suggestions, form, advanced);
+    form.querySelector('button').textContent = '➤';
+    form.querySelector('button').setAttribute('aria-label', T('ابعت','Send'));
     add(
       T("المساعد", "Assistant"),
       T(
