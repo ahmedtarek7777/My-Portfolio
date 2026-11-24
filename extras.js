@@ -571,12 +571,11 @@ async function assistant() {
       for (const model of GEMINI_MODELS) {
         try {
           const res = await fetch(
-            "https://generativelanguage.googleapis.com/v1beta/models/" + model + ":generateContent",
+            "https://portfolio-ai.ahmedtarek-portfolio.workers.dev/?model=" + encodeURIComponent(model),
             {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-                "x-goog-api-key": "AIzaSyCGhWSloTazJEVedVofWI-2cWhArfRaiiI",
               },
               body: geminiBody,
             },
