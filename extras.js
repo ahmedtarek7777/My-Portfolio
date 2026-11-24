@@ -472,7 +472,7 @@ async function assistant() {
     (r) => r.json(),
   );
   let count = projects.length;
-  app.innerHTML = `<div class="notice">${T("ده مساعد للمعرض، مش شات عام. يعرف المعلومات المنشورة عن أحمد والمشروعات بس، ومش بيخترع خبرات أو بيانات شخصية. وضع البحث السريع شغّال فورًا. تقدر تشغّل نموذج ذكاء اصطناعي متعدد اللغات للبحث بالمعنى على جهازك.", "This is a portfolio assistant, not a general chatbot. It uses only Ahmed’s published bio and project information. Quick search works immediately. You can enable a multilingual AI model for on-device semantic search.")}</div><section class="panel"><div class="tools"><button id="enableAI" class="primary">${T("شغّل البحث الذكي بالمعنى", "Enable semantic AI search")}</button><button id="clear">${T("امسح المحادثة", "Clear chat")}</button></div><p>${T("أول تشغيل بيحمّل نموذج حجمه حوالي ١١٨ ميجابايت من Hugging Face. ممكن ياخد وقت، وبعدها بيتخزن في كاش المتصفح. أسئلتك بتتعالج على جهازك ومش بتتبعت لخدمة شات.", "First use downloads an approximately 118 MB model from Hugging Face and may take time. The browser can cache it. Questions are processed on your device, not sent to a chat service.")}</p><div class="tools"><button data-q="${T("مين أحمد؟", "Who is Ahmed?")}">${T("مين أحمد؟", "About Ahmed")}</button><button data-q="${T("ألعاب", "games")}">${T("عايز ألعب", "Find games")}</button><button data-q="${T("محرر كود", "code editor")}">${T("أدوات البرمجة", "Coding tools")}</button></div><div class="chatlog" id="chat" aria-live="polite"></div><form id="ask"><label for="question">${T("اسأل عن المعرض", "Ask about the portfolio")}</label><div class="tools"><input id="question" maxlength="400" required placeholder="${T("مثلاً: فين مشروع الضوضاء؟", "For example: where is the noise maker?")}"><button id="send">${T("اسأل", "Ask")}</button></div></form><p id="status" role="status">${T("الوضع الحالي: بحث سريع بالكلمات، من غير نموذج AI.", "Current mode: quick keyword search, no AI model loaded.")}</p></section>`;
+  app.innerHTML = `<div class="notice">${T("ده شات بوت ذكي بيجاوب على أي سؤال، وكمان بيعرف معلومات المعرض ومشروعات أحمد. لو النت أو الخدمة وقفت بيرجع للبحث السريع في المعرض.", "A smart chatbot that answers any question, and also knows Ahmed portfolio and projects. If the AI service is unreachable it falls back to quick portfolio search.")}</div><section class="panel"><div class="tools"><button id="enableAI" class="primary">${T("شغّل البحث الذكي بالمعنى", "Enable semantic AI search")}</button><button id="clear">${T("امسح المحادثة", "Clear chat")}</button></div><p>${T("أول تشغيل بيحمّل نموذج حجمه حوالي ١١٨ ميجابايت من Hugging Face. ممكن ياخد وقت، وبعدها بيتخزن في كاش المتصفح. أسئلتك بتتعالج على جهازك ومش بتتبعت لخدمة شات.", "First use downloads an approximately 118 MB model from Hugging Face and may take time. The browser can cache it. Questions are processed on your device, not sent to a chat service.")}</p><div class="tools"><button data-q="${T("مين أحمد؟", "Who is Ahmed?")}">${T("مين أحمد؟", "About Ahmed")}</button><button data-q="${T("ألعاب", "games")}">${T("عايز ألعب", "Find games")}</button><button data-q="${T("محرر كود", "code editor")}">${T("أدوات البرمجة", "Coding tools")}</button></div><div class="chatlog" id="chat" aria-live="polite"></div><form id="ask"><label for="question">${T("اسأل أي سؤال", "Ask anything")}</label><div class="tools"><input id="question" maxlength="400" required placeholder="${T("اكتب سؤالك…", "Type your question…")}"><button id="send">${T("اسأل", "Ask")}</button></div></form><p id="status" role="status">${T("الوضع الحالي: بحث سريع بالكلمات، من غير نموذج AI.", "Current mode: quick keyword search, no AI model loaded.")}</p></section>`;
   const docs = [
     {
       title: T("عن أحمد طارق", "About Ahmed Tarek"),
@@ -534,11 +534,59 @@ async function assistant() {
       .replace(/ة/g, "ه")
       .replace(/[ًٌٍَُِّْ]/g, "");
   }
+  const history = [];
   async function answer(q) {
     if (busy) return;
     busy = true;
     $("#send").disabled = true;
     add(T("إنت", "You"), q);
+    const wait = document.createElement("article");
+    wait.innerHTML = "<strong></strong><p></p>";
+    wait.children[0].textContent = T("المساعد", "Assistant");
+    wait.children[1].textContent = "…";
+    $("#chat").append(wait);
+    $("#chat").scrollTop = $("#chat").scrollHeight;
+    try {
+      const siteInfo = docs
+        .slice(0, 2)
+        .map((d) => d.title + ": " + d.text)
+        .join("\n") +
+        "\nProjects (id | name | category | description):\n" +
+        projects.map((p) => p[0] + " | " + p[1] + " | " + p[2] + " | " + p[3]).join("\n");
+      const system =
+        "You are the smart AI assistant inside Ahmed Tarek's portfolio website (Ahmed is a frontend web developer from Egypt). You are a general-purpose, helpful chatbot: answer ANY question on any topic (general knowledge, coding, math, writing, advice, translation, chat), not only questions about the site. When the user asks about Ahmed or the site's projects, use the site information below and never invent personal details such as phone numbers, age or private data. Reply in the user's language; if they write Arabic, use natural Egyptian colloquial Arabic. Be concise and friendly. Site information:\n" +
+        siteInfo.slice(0, 9000);
+      history.push({ role: "user", content: q });
+      const res = await fetch("https://text.pollinations.ai/openai", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model: "openai-fast",
+          messages: [{ role: "system", content: system }, ...history.slice(-12)],
+        }),
+      });
+      if (!res.ok) throw new Error("http " + res.status);
+      const data = await res.json();
+      const reply = (data.choices?.[0]?.message?.content || "").trim();
+      if (!reply) throw new Error("empty");
+      history.push({ role: "assistant", content: reply });
+      wait.remove();
+      add(T("المساعد", "Assistant"), reply);
+      busy = false;
+      $("#send").disabled = false;
+      return;
+    } catch (err) {
+      history.pop();
+      wait.remove();
+      busy = false;
+      return localAnswer(q, true);
+    }
+  }
+  async function localAnswer(q, silent) {
+    if (busy && !silent) return;
+    busy = true;
+    $("#send").disabled = true;
+    if (!silent) add(T("إنت", "You"), q);
     try {
       let n = normal(q),
         words = n.split(/\W+/u).filter(Boolean);
@@ -741,8 +789,8 @@ async function assistant() {
     document.querySelector(".workspace").style.maxWidth = "100%";
     document.body.classList.add("embedded-assistant");
     document.querySelector(".notice").textContent = T(
-      "مساعد المعرض. يعرف المعلومات المنشورة عن أحمد والمشروعات بس.",
-      "Portfolio assistant. I know only Ahmed's published bio and projects.",
+      "شات بوت ذكي. اسأل في أي حاجة، أو عن أحمد ومشروعاته.",
+      "Smart chatbot. Ask me anything, or about Ahmed and his projects.",
     );
     const panel = document.querySelector(".panel"),
       chat = $("#chat"),
@@ -762,8 +810,8 @@ async function assistant() {
     add(
       T("المساعد", "Assistant"),
       T(
-        "أهلاً! تحب تعرف عن أحمد ولا تدوّر على مشروع؟",
-        "Hi! Would you like to know about Ahmed or find a project?",
+        "أهلاً! اسألني في أي حاجة، أو عن أحمد ومشروعاته.",
+        "Hi! Ask me anything, or about Ahmed and his projects.",
       ),
     );
   }
